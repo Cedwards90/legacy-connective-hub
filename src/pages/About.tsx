@@ -6,14 +6,15 @@ const About = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       <div 
-        className="pt-20 bg-cover bg-center"
+        className="pt-20 bg-cover bg-center min-h-[50vh]"
         style={{
-          backgroundImage: "url('/lovable-uploads/390a7a02-a605-443b-87e2-b2e5861c4f16.png')",
+          backgroundImage: "url('/lovable-uploads/3c2acee8-1d5b-4d16-a4f5-6b33da51d524.png')",
           backgroundPosition: "center",
-          backgroundSize: "cover"
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat"
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-black/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-black/60">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 font-playfair tracking-tight text-center">
             About The Legacy Families
           </h1>
