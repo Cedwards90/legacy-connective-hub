@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
-import { WebhookInput } from "./lead-capture/WebhookInput";
 import { LeadForm } from "./lead-capture/LeadForm";
 
 export const LeadCapture = () => {
@@ -8,20 +7,10 @@ export const LeadCapture = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [webhookUrl, setWebhookUrl] = useState("");
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!webhookUrl) {
-      toast({
-        title: "Error",
-        description: "Please set up your Zapier webhook URL first",
-        variant: "destructive",
-      });
-      return;
-    }
 
     if (!name || !email) {
       toast({
@@ -34,19 +23,21 @@ export const LeadCapture = () => {
 
     setIsLoading(true);
     try {
-      await fetch(webhookUrl, {
+      const formData = {
+        name,
+        email,
+        phone,
+        timestamp: new Date().toISOString(),
+        source: window.location.origin,
+      };
+
+      const response = await fetch("https://docs.google.com/spreadsheets/d/1bQ3klmPT_HabJmcgE8CxLl9ytlmizyT5Ye3xCC_tS-U/gviz/tq?tqx=out:json", {
         method: "POST",
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
-        mode: "no-cors",
-        body: JSON.stringify({
-          name,
-          email,
-          phone,
-          timestamp: new Date().toISOString(),
-          source: window.location.origin,
-        }),
+        body: JSON.stringify(formData),
       });
 
       toast({
@@ -80,7 +71,6 @@ export const LeadCapture = () => {
         </div>
 
         <div className="max-w-md mx-auto">
-          <WebhookInput webhookUrl={webhookUrl} setWebhookUrl={setWebhookUrl} />
           <LeadForm
             name={name}
             email={email}
