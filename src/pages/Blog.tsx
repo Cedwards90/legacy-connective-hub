@@ -2,8 +2,17 @@ import { useState, useEffect } from 'react';
 import { Navbar } from "@/components/Navbar";
 import { BlogFeed } from "@/components/BlogFeed";
 import { NewsFilter } from "@/components/NewsFilter";
+import { ApiKeyForm } from "@/components/ApiKeyForm";
+import { FirecrawlService } from '@/utils/FirecrawlService';
 
 const Blog = () => {
+  const [hasApiKey, setHasApiKey] = useState(false);
+
+  useEffect(() => {
+    const apiKey = FirecrawlService.getApiKey();
+    setHasApiKey(!!apiKey);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -15,6 +24,7 @@ const Blog = () => {
           Stay informed about the latest developments in West Garfield Park and surrounding neighborhoods. 
           Our automated system collects and curates news relevant to our community's mission.
         </p>
+        {!hasApiKey && <ApiKeyForm />}
         <NewsFilter />
         <BlogFeed />
       </div>

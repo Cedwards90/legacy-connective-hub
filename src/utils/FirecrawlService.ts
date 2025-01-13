@@ -1,3 +1,5 @@
+import FirecrawlApp from '@mendable/firecrawl-js';
+
 interface CrawlResponse {
   success: boolean;
   error?: string;
@@ -13,33 +15,65 @@ interface CrawlResponse {
 }
 
 export class FirecrawlService {
+  private static API_KEY_STORAGE_KEY = 'firecrawl_api_key';
+  private static firecrawlApp: FirecrawlApp | null = null;
+
+  static saveApiKey(apiKey: string): void {
+    localStorage.setItem(this.API_KEY_STORAGE_KEY, apiKey);
+    this.firecrawlApp = new FirecrawlApp({ apiKey });
+    console.log('API key saved successfully');
+  }
+
+  static getApiKey(): string | null {
+    return localStorage.getItem(this.API_KEY_STORAGE_KEY);
+  }
+
   static async crawlWebsite(url: string): Promise<CrawlResponse> {
+    const apiKey = this.getApiKey();
+    if (!apiKey) {
+      return {
+        success: false,
+        error: 'API key not found. Please set your Firecrawl API key first.'
+      };
+    }
+
     try {
-      // For now, return mock data since we don't have the API key set up
+      if (!this.firecrawlApp) {
+        this.firecrawlApp = new FirecrawlApp({ apiKey });
+      }
+
+      const response = await this.firecrawlApp.crawlUrl(url, {
+        limit: 10,
+        scrapeOptions: {
+          formats: ['markdown', 'html'],
+          selectors: {
+            title: 'h1, .article-title, .post-title',
+            content: 'article, .article-content, .post-content',
+            publishedAt: 'time, .published-date, meta[property="article:published_time"]'
+          }
+        }
+      });
+
+      if (!response.success) {
+        throw new Error(response.error || 'Failed to crawl website');
+      }
+
       return {
         success: true,
         data: {
-          data: [
-            {
-              title: "Community Development Project Launches in West Garfield Park",
-              content: "A new initiative focused on supporting local families and promoting community growth has been announced in West Garfield Park...",
-              url: "https://example.com/article1",
-              publishedAt: new Date().toISOString()
-            },
-            {
-              title: "Local Education Program Expands Reach",
-              content: "The successful after-school program serving West Garfield Park families has received additional funding to expand its services...",
-              url: "https://example.com/article2",
-              publishedAt: new Date(Date.now() - 86400000).toISOString()
-            }
-          ]
+          data: response.data.map((item: any) => ({
+            title: item.title || 'Untitled',
+            content: item.content || item.description || '',
+            url: item.url || '',
+            publishedAt: item.publishedAt || new Date().toISOString()
+          }))
         }
       };
     } catch (error) {
       console.error('Error crawling website:', error);
       return {
         success: false,
-        error: 'Failed to crawl website'
+        error: error instanceof Error ? error.message : 'Failed to crawl website'
       };
     }
   }
