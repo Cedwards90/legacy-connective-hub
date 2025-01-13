@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
-import { WebhookInput } from "./lead-capture/WebhookInput";
+import { useToast } from "@/hooks/use-toast";
 import { LeadForm } from "./lead-capture/LeadForm";
 
 export const LeadCapture = () => {
@@ -8,20 +7,10 @@ export const LeadCapture = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [webhookUrl, setWebhookUrl] = useState("");
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!webhookUrl) {
-      toast({
-        title: "Error",
-        description: "Please set up your Zapier webhook URL first",
-        variant: "destructive",
-      });
-      return;
-    }
 
     if (!name || !email) {
       toast({
@@ -34,26 +23,37 @@ export const LeadCapture = () => {
 
     setIsLoading(true);
     try {
-      await fetch(webhookUrl, {
+      const formData = {
+        name,
+        email,
+        phone,
+        timestamp: new Date().toISOString(),
+        source: window.location.origin,
+      };
+
+      const response = await fetch("https://docs.google.com/forms/d/e/1FAIpQLSfYXKjJ9KbBZqeqNpxXXHUF_q9CkZcKKLhE_kzUqWIxHAiOAw/formResponse", {
         method: "POST",
+        mode: "no-cors", 
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        mode: "no-cors",
-        body: JSON.stringify({
-          name,
-          email,
-          phone,
-          timestamp: new Date().toISOString(),
-          source: window.location.origin,
-        }),
+        body: new URLSearchParams({
+          'entry.2005620554': formData.name,
+          'entry.1045781291': formData.email,
+          'entry.1166974658': formData.phone,
+          'entry.839337160': formData.timestamp,
+          'entry.1065046570': formData.source
+        }).toString()
       });
 
+      // Since we're using no-cors, we won't get a proper response status
+      // Instead, we'll assume success if no error was thrown
       toast({
         title: "Success!",
         description: "Thank you for your interest. We'll be in touch soon!",
       });
 
+      // Clear form fields after successful submission
       setName("");
       setEmail("");
       setPhone("");
@@ -80,7 +80,6 @@ export const LeadCapture = () => {
         </div>
 
         <div className="max-w-md mx-auto">
-          <WebhookInput webhookUrl={webhookUrl} setWebhookUrl={setWebhookUrl} />
           <LeadForm
             name={name}
             email={email}

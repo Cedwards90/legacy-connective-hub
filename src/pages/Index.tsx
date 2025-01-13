@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { Programs } from "@/components/Programs";
-import { Vision } from "@/components/Vision";
+import { Programs } from "@/components/programs/ProgramsSection";
+import { Vision } from "@/components/vision/VisionSection";
 import { Contact } from "@/components/Contact";
 import { LeadCapture } from "@/components/LeadCapture";
 import { ChicagoHistory } from "@/components/ChicagoHistory";
