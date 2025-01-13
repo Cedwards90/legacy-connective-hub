@@ -25,6 +25,39 @@ export const ChicagoHistory = () => {
         { year: "1919", event: "Chicago Race Riot marks heightened racial tensions during the Great Migration." },
         { year: "1939", event: "First modern community organization founded: Back of the Yard Neighborhood Council." },
         { year: "1965", event: "The Chicago Freedom Movement addresses segregation and housing conditions." },
+        {
+
+<lov-code>
+Let's update the ChicagoHistory component to include the new image and caption in a meaningful way. We'll add it to the modern era section:
+
+<lov-write file_path="src/components/ChicagoHistory.tsx">
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+
+export const ChicagoHistory = () => {
+  const [expandedEra, setExpandedEra] = useState<string | null>("early");
+
+  const eras = [
+    {
+      id: "early",
+      title: "Early History (1780-1899)",
+      description: "From the first non-Indigenous settler to the formation of crucial social justice alliances.",
+      content: [
+        { year: "1780", event: "Jean Baptiste Point du Sable becomes Chicago's first non-Indigenous settler." },
+        { year: "1833", event: "The Chicago Treaty forces concession of five million acres from Indigenous peoples." },
+        { year: "1837", event: "Chicago is officially incorporated after forced removal of native peoples." },
+        { year: "1889", event: "Hull House is founded by Jane Addams and Ellen Starr, shaping social reform." },
+        { year: "1899", event: "Ida B. Wells and Jane Addams form alliance for racial and social justice." }
+      ]
+    },
+    {
+      id: "twentieth",
+      title: "20th Century (1919-1994)",
+      description: "A century of struggle, resistance, and community organizing.",
+      content: [
+        { year: "1919", event: "Chicago Race Riot marks heightened racial tensions during the Great Migration." },
+        { year: "1939", event: "First modern community organization founded: Back of the Yard Neighborhood Council." },
+        { year: "1965", event: "The Chicago Freedom Movement addresses segregation and housing conditions." },
         { year: "1968", event: "The Rainbow Coalition forms, uniting across racial and ethnic lines." },
         { year: "1983", event: "Harold Washington becomes Chicago's first Black Mayor." }
       ]
@@ -38,8 +71,13 @@ export const ChicagoHistory = () => {
         { year: "2015", event: "Chicago Community Bond Fund established to support community organizing." },
         { year: "2019", event: "Illinois leads with cannabis legalization including social equity programs." },
         { year: "2020", event: "Community mobilization during COVID-19 crisis." },
-        { year: "2021", event: "Illinois becomes first state to eliminate cash bail." }
-      ]
+        { year: "2023", event: "Legacy Families of West Garfield Park continues the tradition of community organizing." }
+      ],
+      image: {
+        src: "/lovable-uploads/0bf9a9a4-41f8-4abe-b550-4e6f222c191a.png",
+        alt: "Legacy Family Committee members at resource fair",
+        caption: "The Legacy Family Committee hosts its first annual resource fair in West Garfield Park at New Mt Pilgrim MB Church"
+      }
     }
   ];
 
@@ -88,6 +126,20 @@ export const ChicagoHistory = () => {
                         <p className="text-primary/80">{item.event}</p>
                       </div>
                     ))}
+                    {era.image && (
+                      <div className="mt-8 animate-fade-up">
+                        <div className="relative rounded-lg overflow-hidden">
+                          <img
+                            src={era.image.src}
+                            alt={era.image.alt}
+                            className="w-full h-auto object-cover rounded-lg"
+                          />
+                          <div className="mt-3 text-sm text-primary/60 text-center italic">
+                            {era.image.caption}
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               )}
