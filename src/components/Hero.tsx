@@ -6,6 +6,7 @@ export const Hero = () => {
       className="min-h-screen flex items-center justify-center bg-cover bg-center relative"
       style={{
         backgroundImage: "url('/lovable-uploads/54e2169e-c661-47bb-96e2-524a2923a054.png')",
+        backgroundPosition: "center 30%", // Adjusted to move the image up
       }}
     >
       {/* Dark overlay */}
