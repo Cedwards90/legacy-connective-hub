@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
+import { WebhookInput } from "./lead-capture/WebhookInput";
+import { LeadForm } from "./lead-capture/LeadForm";
 
 export const LeadCapture = () => {
   const [name, setName] = useState("");
@@ -35,7 +34,7 @@ export const LeadCapture = () => {
 
     setIsLoading(true);
     try {
-      const response = await fetch(webhookUrl, {
+      await fetch(webhookUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +54,6 @@ export const LeadCapture = () => {
         description: "Thank you for your interest. We'll be in touch soon!",
       });
 
-      // Reset form
       setName("");
       setEmail("");
       setPhone("");
@@ -82,58 +80,17 @@ export const LeadCapture = () => {
         </div>
 
         <div className="max-w-md mx-auto">
-          <div className="mb-6">
-            <Input
-              type="text"
-              placeholder="Zapier Webhook URL"
-              value={webhookUrl}
-              onChange={(e) => setWebhookUrl(e.target.value)}
-              className="mb-4 text-[#221F26]"
-            />
-            <p className="text-sm text-[#403E43]">
-              Set your Zapier webhook URL to start collecting leads
-            </p>
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <Input
-              type="text"
-              placeholder="Your Name *"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              className="text-[#221F26]"
-            />
-            <Input
-              type="email"
-              placeholder="Your Email *"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="text-[#221F26]"
-            />
-            <Input
-              type="tel"
-              placeholder="Your Phone (Optional)"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              className="text-[#221F26]"
-            />
-            <Button
-              type="submit"
-              className="w-full bg-[#1A1F2C] text-white hover:bg-[#403E43]"
-              disabled={isLoading}
-            >
-              {isLoading ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Submitting...
-                </>
-              ) : (
-                "Join Now"
-              )}
-            </Button>
-          </form>
+          <WebhookInput webhookUrl={webhookUrl} setWebhookUrl={setWebhookUrl} />
+          <LeadForm
+            name={name}
+            email={email}
+            phone={phone}
+            isLoading={isLoading}
+            setName={setName}
+            setEmail={setEmail}
+            setPhone={setPhone}
+            onSubmit={handleSubmit}
+          />
         </div>
       </div>
     </section>
