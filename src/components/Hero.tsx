@@ -11,18 +11,18 @@ export const Hero = () => {
             className="w-32 h-32 mx-auto mb-8"
           />
           <h1 className="text-4xl md:text-6xl font-bold text-secondary mb-6">
-            Building Stronger Communities,<br />One Family at a Time
+            Legacy Families Committee
           </h1>
-          <p className="text-xl text-secondary/80 mb-8 max-w-2xl mx-auto">
-            We're dedicated to preserving family legacies and fostering meaningful connections within our community.
+          <p className="text-xl text-secondary/80 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Our mission is to increase the length and quality of lives in West Garfield Park by providing hope, prioritizing safety, and preventing displacement while adding valuable resources to our community.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-secondary text-primary px-8 py-3 rounded-md hover:bg-secondary/90 transition-colors inline-flex items-center justify-center">
-              Learn More
+              Get Involved
               <ArrowRight className="ml-2" size={20} />
             </button>
             <button className="border-2 border-secondary text-secondary px-8 py-3 rounded-md hover:bg-secondary/10 transition-colors">
-              Join Our Community
+              Learn More
             </button>
           </div>
         </div>
