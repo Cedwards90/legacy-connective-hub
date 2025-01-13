@@ -23,7 +23,7 @@ export const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-secondary hover:text-secondary/80 transition-colors">Home</Link>
             <Link to="/committee-members" className="text-secondary hover:text-secondary/80 transition-colors">Committee Members</Link>
-            <a href="#about" className="text-secondary hover:text-secondary/80 transition-colors">About</a>
+            <Link to="/about" className="text-secondary hover:text-secondary/80 transition-colors">About</Link>
             <a href="#programs" className="text-secondary hover:text-secondary/80 transition-colors">Programs</a>
             <a href="#contact" className="text-secondary hover:text-secondary/80 transition-colors">Contact</a>
             <button className="bg-secondary text-primary px-4 py-2 rounded-md hover:bg-secondary/90 transition-colors">
@@ -45,7 +45,7 @@ export const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link to="/" className="block px-3 py-2 text-secondary hover:text-secondary/80">Home</Link>
             <Link to="/committee-members" className="block px-3 py-2 text-secondary hover:text-secondary/80">Committee Members</Link>
-            <a href="#about" className="block px-3 py-2 text-secondary hover:text-secondary/80">About</a>
+            <Link to="/about" className="block px-3 py-2 text-secondary hover:text-secondary/80">About</Link>
             <a href="#programs" className="block px-3 py-2 text-secondary hover:text-secondary/80">Programs</a>
             <a href="#contact" className="block px-3 py-2 text-secondary hover:text-secondary/80">Contact</a>
             <button className="w-full text-left px-3 py-2 text-primary bg-secondary rounded-md">
