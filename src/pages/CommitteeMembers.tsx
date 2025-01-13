@@ -1,6 +1,7 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Navbar } from "@/components/Navbar";
+import { useEffect } from "react";
 
 interface CommitteeMember {
   name: string;
@@ -50,6 +51,17 @@ const committeeMembers: CommitteeMember[] = [
 ];
 
 export const CommitteeMembers = () => {
+  useEffect(() => {
+    // Log when images start loading
+    committeeMembers.forEach(member => {
+      console.log(`Attempting to load image for ${member.name}:`, member.image);
+      const img = new Image();
+      img.onload = () => console.log(`Successfully loaded image for ${member.name}`);
+      img.onerror = (e) => console.error(`Failed to load image for ${member.name}:`, e);
+      img.src = member.image;
+    });
+  }, []);
+
   return (
     <div className="min-h-screen bg-cream">
       <Navbar />
@@ -62,7 +74,16 @@ export const CommitteeMembers = () => {
             <Card key={member.name} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader className="text-center">
                 <Avatar className="w-48 h-48 mx-auto mb-4">
-                  <AvatarImage src={member.image} alt={member.name} className="object-cover" />
+                  <AvatarImage 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="object-cover"
+                    onError={(e) => {
+                      console.error(`Error loading image for ${member.name}`);
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                    }}
+                  />
                   <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                 </Avatar>
                 <h2 className="text-2xl font-playfair font-bold text-primary">{member.name}</h2>
