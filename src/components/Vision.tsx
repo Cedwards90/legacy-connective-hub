@@ -12,6 +12,7 @@ export const Vision = () => {
       title: "Preserve the Collaborative's Vision",
       description: "Our mission is to ensure that the Wellness Collaborative remains true to its original purpose: creating a better, resource-rich community for the people living in West Garfield Park.",
       icon: Heart,
+      image: "/lovable-uploads/e3067d29-0b5f-4f8e-bfcc-1c64b5ff6be2.png",
     },
     {
       title: "Clear Communication",
