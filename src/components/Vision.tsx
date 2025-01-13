@@ -28,13 +28,8 @@ export const Vision = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {visionPillars.map((pillar) => (
             <div key={pillar.title} className="p-6 rounded-lg border border-primary/20 hover:shadow-lg transition-shadow">
-              <div className="flex justify-center mb-4">
-                <pillar.icon className="w-12 h-12 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-primary text-center">{pillar.title}</h3>
-              <p className="text-gray-600 leading-relaxed mb-4 text-center">{pillar.description}</p>
               {pillar.image && (
-                <div className="mt-4">
+                <div className="mb-6">
                   <img 
                     src={pillar.image} 
                     alt="Community members working together" 
@@ -42,6 +37,11 @@ export const Vision = () => {
                   />
                 </div>
               )}
+              <div className="flex justify-center mb-4">
+                <pillar.icon className="w-12 h-12 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-primary text-center">{pillar.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-center">{pillar.description}</p>
             </div>
           ))}
         </div>
