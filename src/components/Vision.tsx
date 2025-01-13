@@ -9,7 +9,7 @@ export const Vision = () => {
       image: "/lovable-uploads/dc2a4ac6-b8d8-4b8d-9986-afbb8613299e.png",
       testimonial: {
         image: "/lovable-uploads/7ba35fb4-3734-489b-8777-62d9d29e1231.png",
-        name: "Darlene "Faye" Hall",
+        name: 'Darlene "Faye" Hall',
         role: "Community Organizer",
         quote: "I have dwelled in the West Garfield Park area for over 5 decades, I have always had a heart for my People and my Community. It is my Mission in my Adult life to help Empower my People and my Community. It is Important that I leave behind a Legacy that will ensure that the future of West Garfield Park neighborhood includes those who live here, and have here for decades."
       }
