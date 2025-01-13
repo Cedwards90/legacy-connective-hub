@@ -25,12 +25,42 @@
   }
 }
 
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
 }
 
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary via-secondary to-accent;
   }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced focus styles */
+:focus {
+  @apply outline-none ring-2 ring-secondary ring-offset-2;
+}
+
+/* Custom selection color */
+::selection {
+  @apply bg-secondary/20 text-primary;
 }

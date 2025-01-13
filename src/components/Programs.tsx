@@ -20,15 +20,27 @@ export const Programs = () => {
   ];
 
   return (
-    <section id="programs" className="py-20 bg-cream">
+    <section className="py-32 bg-gradient-to-b from-white to-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Our Programs</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-16 tracking-tight">Our Programs</h2>
         <div className="grid md:grid-cols-3 gap-8">
-          {programs.map((program) => (
-            <div key={program.title} className="bg-white p-6 rounded-lg hover:shadow-lg transition-shadow border border-secondary/20">
-              <program.icon className="w-12 h-12 text-secondary mb-4" />
-              <h3 className="text-xl font-bold mb-2 text-primary">{program.title}</h3>
-              <p className="text-gray-600">{program.description}</p>
+          {programs.map((program, index) => (
+            <div 
+              key={program.title} 
+              className="group bg-white p-8 rounded-2xl hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-secondary/10"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <div className="flex justify-center mb-6">
+                <div className="p-4 rounded-full bg-cream group-hover:bg-secondary/10 transition-colors duration-300">
+                  <program.icon className="w-8 h-8 text-primary group-hover:text-secondary transition-colors duration-300" />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-primary text-center group-hover:text-secondary transition-colors duration-300">
+                {program.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-center">
+                {program.description}
+              </p>
             </div>
           ))}
         </div>

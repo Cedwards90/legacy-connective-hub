@@ -23,26 +23,38 @@ export const Vision = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-32 bg-gradient-to-b from-cream to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Our Vision</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-16 tracking-tight">
+          Our Vision
+        </h2>
         <div className="grid md:grid-cols-3 gap-8">
-          {visionPillars.map((pillar) => (
-            <div key={pillar.title} className="p-6 rounded-lg border border-primary/20 hover:shadow-lg transition-shadow">
+          {visionPillars.map((pillar, index) => (
+            <div 
+              key={pillar.title} 
+              className="group bg-white p-8 rounded-2xl border border-primary/10 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
               {pillar.image && (
-                <div className="mb-6 aspect-[4/3] w-full">
+                <div className="mb-8 aspect-video w-full overflow-hidden rounded-xl">
                   <img 
                     src={pillar.image} 
-                    alt="Community members working together" 
-                    className="w-full h-full object-cover rounded-lg shadow-md"
+                    alt={pillar.title} 
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               )}
-              <div className="flex justify-center mb-4">
-                <pillar.icon className="w-12 h-12 text-primary" />
+              <div className="flex justify-center mb-6">
+                <div className="p-4 rounded-full bg-cream group-hover:bg-secondary/10 transition-colors duration-300">
+                  <pillar.icon className="w-8 h-8 text-primary group-hover:text-secondary transition-colors duration-300" />
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-4 text-primary text-center">{pillar.title}</h3>
-              <p className="text-gray-600 leading-relaxed text-center">{pillar.description}</p>
+              <h3 className="text-2xl font-bold mb-4 text-primary text-center group-hover:text-secondary transition-colors duration-300">
+                {pillar.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-center">
+                {pillar.description}
+              </p>
             </div>
           ))}
         </div>
