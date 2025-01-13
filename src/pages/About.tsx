@@ -8,10 +8,11 @@ const About = () => {
       <div 
         className="pt-20 bg-cover bg-center min-h-[50vh]"
         style={{
-          backgroundImage: "url('/lovable-uploads/3c2acee8-1d5b-4d16-a4f5-6b33da51d524.png')",
+          backgroundImage: "url('/lovable-uploads/70b23282-94fc-4e56-940f-3a07e2fdc537.png')",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          backgroundRepeat: "no-repeat"
+          backgroundRepeat: "no-repeat",
+          minHeight: "600px"
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-black/60">
