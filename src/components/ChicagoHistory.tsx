@@ -52,10 +52,10 @@ export const ChicagoHistory = () => {
     <section className="py-32 bg-gradient-to-b from-cream to-white" id="history">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1A1F2C] mb-6 tracking-tight">
             Chicago's Legacy of Community Organizing
           </h2>
-          <p className="text-xl text-primary/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-[#221F26] max-w-3xl mx-auto leading-relaxed">
             Our work builds upon generations of community organizing in Chicago, continuing the fight for justice, equity, and community empowerment in West Garfield Park.
           </p>
         </div>
@@ -71,8 +71,8 @@ export const ChicagoHistory = () => {
                 className="w-full p-6 flex items-center justify-between text-left hover:bg-cream/50 transition-colors"
               >
                 <div>
-                  <h3 className="text-2xl font-bold text-primary">{era.title}</h3>
-                  <p className="text-primary/60 mt-2">{era.description}</p>
+                  <h3 className="text-2xl font-bold text-[#1A1F2C]">{era.title}</h3>
+                  <p className="text-[#403E43] mt-2">{era.description}</p>
                 </div>
                 {expandedEra === era.id ? (
                   <ChevronUp className="w-6 h-6 text-secondary flex-shrink-0" />
@@ -89,8 +89,8 @@ export const ChicagoHistory = () => {
                         key={item.year}
                         className="flex gap-6 items-start animate-fade-up"
                       >
-                        <span className="font-bold text-secondary whitespace-nowrap">{item.year}</span>
-                        <p className="text-primary/80">{item.event}</p>
+                        <span className="font-bold text-[#1A1F2C] whitespace-nowrap">{item.year}</span>
+                        <p className="text-[#221F26]">{item.event}</p>
                       </div>
                     ))}
                     {era.image && (
@@ -101,7 +101,7 @@ export const ChicagoHistory = () => {
                             alt={era.image.alt}
                             className="w-full h-auto object-cover rounded-lg"
                           />
-                          <div className="mt-3 text-sm text-primary/60 text-center italic">
+                          <div className="mt-3 text-sm text-[#403E43] text-center italic">
                             {era.image.caption}
                           </div>
                         </div>
@@ -115,7 +115,7 @@ export const ChicagoHistory = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-lg text-primary/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-[#221F26] max-w-3xl mx-auto leading-relaxed">
             The Legacy Families of West Garfield Park continues this rich tradition of community organizing, working to prevent displacement, prioritize safety, and build resources within our community. Together, we're writing the next chapter in Chicago's history of grassroots activism and community empowerment.
           </p>
         </div>
