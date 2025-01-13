@@ -26,7 +26,7 @@ export const Vision = () => {
   return (
     <section className="py-32 bg-gradient-to-b from-cream to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-16 tracking-tight">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-black mb-16 tracking-tight">
           Our Vision
         </h2>
         <div className="grid md:grid-cols-3 gap-8">

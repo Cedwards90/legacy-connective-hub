@@ -23,13 +23,13 @@ export const VisionCard = ({ title, description, icon: Icon, image }: VisionCard
       )}
       <div className="flex justify-center mb-6">
         <div className="p-4 rounded-full bg-cream group-hover:bg-secondary/10 transition-colors duration-300">
-          <Icon className="w-8 h-8 text-primary group-hover:text-secondary transition-colors duration-300" />
+          <Icon className="w-8 h-8 text-black group-hover:text-secondary transition-colors duration-300" />
         </div>
       </div>
-      <h3 className="text-2xl font-bold mb-4 text-primary text-center group-hover:text-secondary transition-colors duration-300">
+      <h3 className="text-2xl font-bold mb-4 text-black text-center group-hover:text-secondary transition-colors duration-300">
         {title}
       </h3>
-      <p className="text-gray-600 leading-relaxed text-center">
+      <p className="text-black leading-relaxed text-center">
         {description}
       </p>
     </div>
