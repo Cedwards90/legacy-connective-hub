@@ -25,14 +25,14 @@ export const CommitteeMembers = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
       <Navbar />
       <div className="pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl font-playfair font-bold text-center mb-8 text-secondary">
             Our Committee Members
           </h1>
-          <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+          <p className="text-xl text-center text-gray-700 mb-16 max-w-3xl mx-auto">
             Meet the dedicated individuals who are working to preserve and enhance the West Garfield Park community.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -43,7 +43,7 @@ export const CommitteeMembers = () => {
                     setSelectedMember(member);
                     setIsOpen(true);
                   }}
-                  className="w-full cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+                  className="w-full cursor-pointer transition-transform duration-300 hover:scale-[1.02] bg-white rounded-xl shadow-md p-4"
                 >
                   <div className="relative aspect-[4/5] w-full max-w-[300px] mx-auto overflow-hidden rounded-2xl">
                     <img
@@ -77,14 +77,16 @@ export const CommitteeMembers = () => {
           {selectedMember && (
             <>
               <SheetHeader className="mb-6">
-                <SheetTitle className="text-3xl font-playfair text-secondary">{selectedMember.name}</SheetTitle>
-                <SheetDescription className="text-lg text-accent">
+                <SheetTitle className="text-3xl font-playfair text-secondary">
+                  {selectedMember.name}
+                </SheetTitle>
+                <SheetDescription className="text-lg font-medium text-accent">
                   {selectedMember.role}
                 </SheetDescription>
               </SheetHeader>
               
               {selectedMember.education && (
-                <div className="mb-6 bg-gray-50 p-6 rounded-lg">
+                <div className="mb-6 bg-gray-50 p-6 rounded-lg shadow-sm">
                   <h3 className="text-xl font-semibold text-secondary mb-3">Education</h3>
                   <ul className="list-disc list-inside text-gray-700 space-y-2">
                     {selectedMember.education.map((edu, index) => (
@@ -94,7 +96,7 @@ export const CommitteeMembers = () => {
                 </div>
               )}
 
-              <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold text-secondary mb-3">Biography</h3>
                 <p className="text-base text-gray-700 leading-relaxed whitespace-pre-line">
                   {selectedMember.bio}
