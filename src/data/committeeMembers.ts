@@ -35,7 +35,7 @@ export const committeeMembers: CommitteeMember[] = [
   },
   {
     name: "Tosheika Thomas",
-    image: "/lovable-uploads/342c2e38-a693-4980-b8fc-c0ed9a318f6a.png",
+    image: "/lovable-uploads/f08a9776-7193-4a37-8153-f7d20259c76c.png",
     role: "Treasurer, Legacy Family's Community",
     education: [
       "Malcolm X College - A.A. in Elementary Education",
