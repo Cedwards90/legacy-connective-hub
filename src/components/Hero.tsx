@@ -8,7 +8,7 @@ export const Hero = () => {
           <img 
             src="/lovable-uploads/09e2e5ca-1223-4ed9-9cba-52ac8db02a0b.png" 
             alt="Legacy Families Logo" 
-            className="w-48 h-48 mx-auto mb-8 object-contain mix-blend-screen"
+            className="w-96 h-96 mx-auto mb-8 object-contain mix-blend-screen"
           />
           <h1 className="text-4xl md:text-6xl font-bold text-secondary mb-6">
             The Legacy Families of West Garfield Park
