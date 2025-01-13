@@ -37,7 +37,7 @@ export const CommitteeMembers = () => {
               >
                 <div className="flex flex-col gap-6">
                   <CollapsibleTrigger className="w-full cursor-pointer transition-transform duration-300 hover:scale-[1.02]">
-                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
+                    <div className="relative aspect-[4/5] w-full max-w-[300px] mx-auto overflow-hidden rounded-2xl">
                       <img
                         src={member.image}
                         alt={member.name}
