@@ -14,7 +14,7 @@ export const Navbar = () => {
               alt="Legacy Families Logo" 
               className="h-12 w-12"
             />
-            <h1 className="text-xl font-playfair font-bold text-secondary">Legacy Families Committee</h1>
+            <h1 className="text-xl font-playfair font-bold text-secondary">The Legacy Families of West Garfield Park</h1>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">

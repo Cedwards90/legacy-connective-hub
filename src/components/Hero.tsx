@@ -11,7 +11,7 @@ export const Hero = () => {
             className="w-32 h-32 mx-auto mb-8"
           />
           <h1 className="text-4xl md:text-6xl font-bold text-secondary mb-6">
-            Legacy Families Committee
+            The Legacy Families of West Garfield Park
           </h1>
           <p className="text-xl text-secondary/80 mb-12 max-w-3xl mx-auto leading-relaxed">
             Our mission is to increase the length and quality of lives in West Garfield Park by providing hope, prioritizing safety, and preventing displacement while adding valuable resources to our community.
