@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { LeadForm } from "./lead-capture/LeadForm";
-
-const API_KEY_STORAGE_KEY = 'GOOGLE_SHEETS_API_KEY';
 
 export const LeadCapture = () => {
   const [name, setName] = useState("");
@@ -10,13 +8,6 @@ export const LeadCapture = () => {
   const [phone, setPhone] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
-
-  useEffect(() => {
-    // Store API key in localStorage if not already present
-    if (!localStorage.getItem(API_KEY_STORAGE_KEY)) {
-      localStorage.setItem(API_KEY_STORAGE_KEY, 'AIzaSyDcNNSPd-gBTquPqkDi-qJhO9CvVxj68X8');
-    }
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,7 +23,6 @@ export const LeadCapture = () => {
 
     setIsLoading(true);
     try {
-      const apiKey = localStorage.getItem(API_KEY_STORAGE_KEY);
       const formData = {
         name,
         email,
@@ -41,20 +31,22 @@ export const LeadCapture = () => {
         source: window.location.origin,
       };
 
-      const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/1bQ3klmPT_HabJmcgE8CxLl9ytlmizyT5Ye3xCC_tS-U/values/A1:append?valueInputOption=RAW&key=${apiKey}`, {
+      const response = await fetch("https://docs.google.com/forms/d/e/1FAIpQLSfYXKjJ9KbBZqeqNpxXXHUF_q9CkZcKKLhE_kzUqWIxHAiOAw/formResponse", {
         method: "POST",
+        mode: "no-cors", // This is important for CORS handling
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: JSON.stringify({
-          values: [[formData.name, formData.email, formData.phone, formData.timestamp, formData.source]]
-        }),
+        body: new URLSearchParams({
+          'entry.2005620554': formData.name,
+          'entry.1045781291': formData.email,
+          'entry.1166974658': formData.phone,
+          'entry.839337160': formData.timestamp,
+          'entry.1065046570': formData.source
+        }).toString()
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to submit form');
-      }
-
+      // Since no-cors mode doesn't give us response details, we assume success if no error is thrown
       toast({
         title: "Success!",
         description: "Thank you for your interest. We'll be in touch soon!",
