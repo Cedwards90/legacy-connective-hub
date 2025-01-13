@@ -14,6 +14,10 @@ export const CommitteeMembers = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     // Log when images start loading
     committeeMembers.forEach(member => {
       console.log(`Attempting to load image for ${member.name}:`, member.image);
