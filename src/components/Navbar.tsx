@@ -10,7 +10,7 @@ export const Navbar = () => {
         <div className="flex justify-between h-20">
           <div className="flex-shrink-0 flex items-center gap-3">
             <img 
-              src="/lovable-uploads/f974c3c3-5774-4b30-b52a-07be01c13af9.png" 
+              src="/lovable-uploads/7f10ff44-2f86-4554-91e8-b1f232007f27.png" 
               alt="Legacy Families Logo" 
               className="h-12 w-12"
             />
