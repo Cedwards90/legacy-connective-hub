@@ -6,13 +6,13 @@ const About = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       <div 
-        className="pt-20 bg-cover bg-center min-h-[50vh]"
+        className="pt-20 bg-cover bg-center"
         style={{
           backgroundImage: "url('/lovable-uploads/b8fa80c3-ec59-4d2d-9a11-be8dae597136.png')",
           backgroundPosition: "center",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
-          minHeight: "600px"
+          minHeight: "400px"
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-black/60">
