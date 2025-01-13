@@ -63,8 +63,8 @@ export const TheoryOfChange = () => {
     <section className="py-32 bg-gradient-to-b from-white to-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 tracking-tight">Theory of Change</h2>
-          <p className="text-xl text-primary/80 max-w-3xl mx-auto leading-relaxed font-light">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1A1F2C] mb-6 tracking-tight">Theory of Change</h2>
+          <p className="text-xl text-[#221F26] max-w-3xl mx-auto leading-relaxed">
             "The Legacy Families' mission is to increase the length and quality of lives in West Garfield Park by providing hope, prioritizing safety, and preventing displacement while adding valuable resources to our community."
           </p>
         </div>
@@ -78,16 +78,20 @@ export const TheoryOfChange = () => {
             >
               <div className="flex justify-center mb-6">
                 <div className="p-4 rounded-full bg-cream group-hover:bg-secondary/10 transition-colors duration-300">
-                  <pillar.icon className="w-8 h-8 text-primary group-hover:text-secondary transition-colors duration-300" />
+                  <pillar.icon className="w-8 h-8 text-[#1A1F2C] group-hover:text-secondary transition-colors duration-300" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-primary text-center group-hover:text-secondary transition-colors duration-300">{pillar.title}</h3>
-              <p className="text-gray-600 mb-8 text-center leading-relaxed">{pillar.description}</p>
-              <ul className="space-y-3">
+              <h3 className="text-2xl font-bold mb-4 text-[#1A1F2C] text-center group-hover:text-secondary transition-colors duration-300">
+                {pillar.title}
+              </h3>
+              <p className="text-[#221F26] leading-relaxed text-center">
+                {pillar.description}
+              </p>
+              <ul className="space-y-3 mt-6">
                 {pillar.actions.map((action, index) => (
-                  <li key={index} className="flex items-center text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+                  <li key={index} className="flex items-center text-[#403E43] group-hover:text-[#221F26] transition-colors duration-300">
                     <span className="w-2 h-2 bg-secondary rounded-full mr-3 flex-shrink-0"></span>
-                    <span className="text-sm">{action}</span>
+                    <span>{action}</span>
                   </li>
                 ))}
               </ul>
