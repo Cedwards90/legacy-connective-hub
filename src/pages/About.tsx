@@ -1,5 +1,4 @@
 import { Navbar } from "@/components/Navbar";
-import { TheoryOfChange } from "@/components/TheoryOfChange";
 
 const About = () => {
   return (
@@ -23,7 +22,6 @@ const About = () => {
             The Legacy Families of West Garfield Park is dedicated to increasing the length and quality of lives in our community. Through our comprehensive approach, we focus on providing hope, ensuring safety, and preventing displacement while bringing valuable resources to our neighborhood.
           </p>
         </div>
-        <TheoryOfChange />
       </div>
     </div>
   );
