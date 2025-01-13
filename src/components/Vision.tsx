@@ -30,11 +30,11 @@ export const Vision = () => {
           {visionPillars.map((pillar) => (
             <div key={pillar.title} className="p-6 rounded-lg border border-primary/20 hover:shadow-lg transition-shadow">
               {pillar.image && (
-                <div className="mb-6">
+                <div className="mb-6 aspect-[4/3] w-full">
                   <img 
                     src={pillar.image} 
                     alt="Community members working together" 
-                    className="w-full h-auto rounded-lg shadow-md"
+                    className="w-full h-full object-cover rounded-lg shadow-md"
                   />
                 </div>
               )}
