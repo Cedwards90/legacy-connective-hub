@@ -73,18 +73,18 @@ export const CommitteeMembers = () => {
       </div>
 
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        <SheetContent className="w-full sm:max-w-xl overflow-y-auto">
+        <SheetContent className="w-full sm:max-w-xl overflow-y-auto bg-white shadow-xl border-l border-gray-200">
           {selectedMember && (
             <>
               <SheetHeader className="mb-6">
-                <SheetTitle className="text-3xl font-playfair">{selectedMember.name}</SheetTitle>
+                <SheetTitle className="text-3xl font-playfair text-secondary">{selectedMember.name}</SheetTitle>
                 <SheetDescription className="text-lg text-accent">
                   {selectedMember.role}
                 </SheetDescription>
               </SheetHeader>
               
               {selectedMember.education && (
-                <div className="mb-6">
+                <div className="mb-6 bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold text-secondary mb-3">Education</h3>
                   <ul className="list-disc list-inside text-gray-700 space-y-2">
                     {selectedMember.education.map((edu, index) => (
@@ -94,7 +94,7 @@ export const CommitteeMembers = () => {
                 </div>
               )}
 
-              <div>
+              <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-secondary mb-3">Biography</h3>
                 <p className="text-base text-gray-700 leading-relaxed whitespace-pre-line">
                   {selectedMember.bio}
