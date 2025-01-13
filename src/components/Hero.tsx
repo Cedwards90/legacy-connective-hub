@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -39,9 +40,12 @@ export const Hero = () => {
               Get Involved
               <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
             </a>
-            <button className="group border-2 border-[#1A1F2C] text-[#1A1F2C] px-8 py-4 rounded-md hover:bg-[#1A1F2C]/10 transition-all duration-300 transform hover:scale-105">
+            <Link 
+              to="/about"
+              className="group border-2 border-[#1A1F2C] text-[#1A1F2C] px-8 py-4 rounded-md hover:bg-[#1A1F2C]/10 transition-all duration-300 transform hover:scale-105"
+            >
               Learn More
-            </button>
+            </Link>
           </div>
         </div>
       </div>
