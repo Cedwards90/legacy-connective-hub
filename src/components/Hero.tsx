@@ -42,6 +42,7 @@ export const Hero = () => {
             </a>
             <Link 
               to="/about"
+              onClick={() => window.scrollTo(0, 0)}
               className="group border-2 border-[#1A1F2C] text-[#1A1F2C] px-8 py-4 rounded-md hover:bg-[#1A1F2C]/10 transition-all duration-300 transform hover:scale-105"
             >
               Learn More
