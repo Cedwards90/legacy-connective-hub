@@ -1,10 +1,17 @@
 import { Navbar } from "@/components/Navbar";
 import { committeeMembers } from "@/data/committeeMembers";
 import { useEffect, useState } from "react";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 
 export const CommitteeMembers = () => {
-  const [expandedMember, setExpandedMember] = useState<string | null>(null);
+  const [selectedMember, setSelectedMember] = useState<typeof committeeMembers[0] | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     // Log when images start loading
@@ -30,58 +37,73 @@ export const CommitteeMembers = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {committeeMembers.map((member) => (
-              <Collapsible 
-                key={member.name}
-                open={expandedMember === member.name}
-                onOpenChange={(isOpen) => setExpandedMember(isOpen ? member.name : null)}
-              >
-                <div className="flex flex-col gap-6">
-                  <CollapsibleTrigger className="w-full cursor-pointer transition-transform duration-300 hover:scale-[1.02]">
-                    <div className="relative aspect-[4/5] w-full max-w-[300px] mx-auto overflow-hidden rounded-2xl">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover object-center"
-                        onError={(e) => {
-                          console.error(`Error loading image for ${member.name}`);
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                        }}
-                      />
-                    </div>
-                  </CollapsibleTrigger>
-                  <div className="space-y-4">
+              <div key={member.name} className="flex flex-col gap-6">
+                <button 
+                  onClick={() => {
+                    setSelectedMember(member);
+                    setIsOpen(true);
+                  }}
+                  className="w-full cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+                >
+                  <div className="relative aspect-[4/5] w-full max-w-[300px] mx-auto overflow-hidden rounded-2xl">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover object-center"
+                      onError={(e) => {
+                        console.error(`Error loading image for ${member.name}`);
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                      }}
+                    />
+                  </div>
+                  <div className="mt-4 space-y-2">
                     <h2 className="text-2xl font-playfair font-bold text-secondary">
                       {member.name}
                     </h2>
                     <p className="text-lg font-medium text-accent">
                       {member.role}
                     </p>
-                    <CollapsibleContent className="space-y-6">
-                      {member.education && (
-                        <div className="space-y-2">
-                          <h3 className="text-lg font-semibold text-secondary">Education</h3>
-                          <ul className="list-disc list-inside text-gray-700 space-y-1">
-                            {member.education.map((edu, index) => (
-                              <li key={index} className="text-base">{edu}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                      <div className="space-y-2">
-                        <h3 className="text-lg font-semibold text-secondary">Biography</h3>
-                        <p className="text-base text-gray-700 leading-relaxed whitespace-pre-line">
-                          {member.bio}
-                        </p>
-                      </div>
-                    </CollapsibleContent>
                   </div>
-                </div>
-              </Collapsible>
+                </button>
+              </div>
             ))}
           </div>
         </div>
       </div>
+
+      <Sheet open={isOpen} onOpenChange={setIsOpen}>
+        <SheetContent className="w-full sm:max-w-xl overflow-y-auto">
+          {selectedMember && (
+            <>
+              <SheetHeader className="mb-6">
+                <SheetTitle className="text-3xl font-playfair">{selectedMember.name}</SheetTitle>
+                <SheetDescription className="text-lg text-accent">
+                  {selectedMember.role}
+                </SheetDescription>
+              </SheetHeader>
+              
+              {selectedMember.education && (
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-secondary mb-3">Education</h3>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                    {selectedMember.education.map((edu, index) => (
+                      <li key={index} className="text-base">{edu}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <div>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Biography</h3>
+                <p className="text-base text-gray-700 leading-relaxed whitespace-pre-line">
+                  {selectedMember.bio}
+                </p>
+              </div>
+            </>
+          )}
+        </SheetContent>
+      </Sheet>
     </div>
   );
 };
