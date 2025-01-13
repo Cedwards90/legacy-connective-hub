@@ -1,6 +1,8 @@
-import { useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
+import { useState, useEffect } from "react";
+import { useToast } from "@/hooks/use-toast";
 import { LeadForm } from "./lead-capture/LeadForm";
+
+const API_KEY_STORAGE_KEY = 'GOOGLE_SHEETS_API_KEY';
 
 export const LeadCapture = () => {
   const [name, setName] = useState("");
@@ -8,6 +10,13 @@ export const LeadCapture = () => {
   const [phone, setPhone] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+
+  useEffect(() => {
+    // Store API key in localStorage if not already present
+    if (!localStorage.getItem(API_KEY_STORAGE_KEY)) {
+      localStorage.setItem(API_KEY_STORAGE_KEY, 'AIzaSyDcNNSPd-gBTquPqkDi-qJhO9CvVxj68X8');
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,6 +32,7 @@ export const LeadCapture = () => {
 
     setIsLoading(true);
     try {
+      const apiKey = localStorage.getItem(API_KEY_STORAGE_KEY);
       const formData = {
         name,
         email,
@@ -31,14 +41,19 @@ export const LeadCapture = () => {
         source: window.location.origin,
       };
 
-      const response = await fetch("https://docs.google.com/spreadsheets/d/1bQ3klmPT_HabJmcgE8CxLl9ytlmizyT5Ye3xCC_tS-U/gviz/tq?tqx=out:json", {
+      const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/1bQ3klmPT_HabJmcgE8CxLl9ytlmizyT5Ye3xCC_tS-U/values/A1:append?valueInputOption=RAW&key=${apiKey}`, {
         method: "POST",
-        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          values: [[formData.name, formData.email, formData.phone, formData.timestamp, formData.source]]
+        }),
       });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
 
       toast({
         title: "Success!",
