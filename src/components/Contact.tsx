@@ -11,15 +11,15 @@ export const Contact = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <Mail className="w-6 h-6 mr-3" />
-                <span>contact@legacyfamilies.org</span>
+                <span>admin@wgplegacy.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-6 h-6 mr-3" />
-                <span>(555) 123-4567</span>
+                <span>773.287.5051</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-6 h-6 mr-3" />
-                <span>123 Community Street, City, State 12345</span>
+                <span>4301 W. Washington Blvd, Chicago, IL 60624</span>
               </div>
             </div>
           </div>
