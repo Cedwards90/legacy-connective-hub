@@ -33,7 +33,7 @@ export const LeadCapture = () => {
 
       const response = await fetch("https://docs.google.com/forms/d/e/1FAIpQLSfYXKjJ9KbBZqeqNpxXXHUF_q9CkZcKKLhE_kzUqWIxHAiOAw/formResponse", {
         method: "POST",
-        mode: "no-cors", // This is important for CORS handling
+        mode: "no-cors", 
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
@@ -46,12 +46,14 @@ export const LeadCapture = () => {
         }).toString()
       });
 
-      // Since no-cors mode doesn't give us response details, we assume success if no error is thrown
+      // Since we're using no-cors, we won't get a proper response status
+      // Instead, we'll assume success if no error was thrown
       toast({
         title: "Success!",
         description: "Thank you for your interest. We'll be in touch soon!",
       });
 
+      // Clear form fields after successful submission
       setName("");
       setEmail("");
       setPhone("");
