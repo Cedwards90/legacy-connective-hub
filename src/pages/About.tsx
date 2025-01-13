@@ -19,8 +19,11 @@ const About = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 font-playfair tracking-tight text-center">
             About The Legacy Families
           </h1>
-          <p className="text-lg text-white leading-relaxed mb-12 max-w-3xl mx-auto text-center">
+          <p className="text-lg text-white leading-relaxed mb-6 max-w-3xl mx-auto text-center">
             The Legacy Families of West Garfield Park is dedicated to increasing the length and quality of lives in our community. Through our comprehensive approach, we focus on providing hope, ensuring safety, and preventing displacement while bringing valuable resources to our neighborhood.
+          </p>
+          <p className="text-lg text-white leading-relaxed mb-12 max-w-3xl mx-auto text-center">
+            Our Theory of Change is actively demonstrated through our daily work in the community. From providing shelter and housing assistance to supporting mental health initiatives, each pillar of our approach is carefully implemented to create lasting positive change. Through financial literacy programs, wellness activities, and spiritual growth opportunities, we're building a stronger, more resilient West Garfield Park that honors both our heritage and our future.
           </p>
         </div>
         <TheoryOfChange />
