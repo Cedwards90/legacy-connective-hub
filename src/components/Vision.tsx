@@ -25,7 +25,7 @@ export const Vision = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Our Vision</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {visionPillars.map((pillar) => (
-            <div key={pillar.title} className="p-6 rounded-lg border border-primary/20 hover:shadow-lg transition-shadow">
+            <div key={pillar.title} className="p-6 rounded-lg border border-primary/20 hover:shadow-lg transition-shadow text-center">
               <div className="flex justify-center mb-4">
                 <pillar.icon className="w-12 h-12 text-primary" />
               </div>
