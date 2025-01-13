@@ -36,16 +36,16 @@ export const CommitteeMembers = () => {
                 onOpenChange={(isOpen) => setExpandedMember(isOpen ? member.name : null)}
               >
                 <div 
-                  className={`flex flex-col lg:flex-row gap-12 items-start ${
+                  className={`flex flex-col lg:flex-row gap-12 items-center ${
                     index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                   }`}
                 >
                   <CollapsibleTrigger className="w-full lg:w-1/2 cursor-pointer transition-transform duration-300 hover:scale-[1.02]">
-                    <div className="aspect-square overflow-hidden rounded-2xl">
+                    <div className="relative aspect-[4/5] w-full max-w-2xl mx-auto overflow-hidden rounded-2xl">
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-center"
                         onError={(e) => {
                           console.error(`Error loading image for ${member.name}`);
                           const target = e.target as HTMLImageElement;
