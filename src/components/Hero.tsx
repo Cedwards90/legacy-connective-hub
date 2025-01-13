@@ -6,7 +6,7 @@ export const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center animate-fade-up">
           <img 
-            src="/lovable-uploads/e8b1b75c-6358-4e01-bc9f-0ba867de98ca.png" 
+            src="/lovable-uploads/f974c3c3-5774-4b30-b52a-07be01c13af9.png" 
             alt="Legacy Families Logo" 
             className="w-32 h-32 mx-auto mb-8"
           />
