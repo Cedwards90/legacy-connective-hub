@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { TheoryOfChange } from "@/components/theory-of-change/TheoryOfChange";
 
 const About = () => {
   return (
@@ -23,6 +24,7 @@ const About = () => {
           </p>
         </div>
       </div>
+      <TheoryOfChange />
     </div>
   );
 };
