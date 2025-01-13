@@ -36,6 +36,16 @@ const committeeMembers: CommitteeMember[] = [
       "Malcolm X College - Associate Degree in Business Administrative Assistant"
     ],
     bio: "I am one of the Legacy Family's members that was created by Rev Dr. Marshall E. Hatch Sr and his son Rev. Marshall J. Hatch Jr. I have a Associate Degree in Business Administrative Assistant from Malcolm X College where I worked as an Administrator the last 18 months for the Vice President Mrs. Delinda Todd and then Mr. Roy Walker in the Athletic Department until I graduated in May 2013. My family moved to West Garfield Park in October 1969 and we all still reside here Today. Our Mission of the Legacy Families is to increase the length and quantity of the lives of the people in West Garfield Park by providing hope, Prioritizing safety, and preventing displacement while adding valuable resources to our community. My hobbies are designing and creating my own clothing, crocheting and furthering my education. I don't want to lose the use of my learning skills so I continue to educated myself all the time."
+  },
+  {
+    name: "Tosheika",
+    image: "/lovable-uploads/342c2e38-a693-4980-b8fc-c0ed9a318f6a.png",
+    role: "Treasurer, Legacy Family's Community",
+    education: [
+      "Malcolm X College - A.A. in Elementary Education",
+      "National-Louis University - B.A. in Psychology"
+    ],
+    bio: "I'm one of the four founding members of The Legacy Family's Community. Current Treasurer. I have an A.A. in Elementary Education from Malcolm X College and a B.A. in Psychology from National-Louis University. I was born, raised and currently reside on Chicago's west Garfield Park. The Mission of Legacy Family is to increase the length and quantity of lives in West Garfield Park by providing hope, prioritizing safety, and preventing displacement while adding valuable resources to our community. My interest are discovering new restaurants with excellent food. My hobbies are writing and self and home improvement."
   }
 ];
 
