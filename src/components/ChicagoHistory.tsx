@@ -25,39 +25,6 @@ export const ChicagoHistory = () => {
         { year: "1919", event: "Chicago Race Riot marks heightened racial tensions during the Great Migration." },
         { year: "1939", event: "First modern community organization founded: Back of the Yard Neighborhood Council." },
         { year: "1965", event: "The Chicago Freedom Movement addresses segregation and housing conditions." },
-        {
-
-<lov-code>
-Let's update the ChicagoHistory component to include the new image and caption in a meaningful way. We'll add it to the modern era section:
-
-<lov-write file_path="src/components/ChicagoHistory.tsx">
-import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
-
-export const ChicagoHistory = () => {
-  const [expandedEra, setExpandedEra] = useState<string | null>("early");
-
-  const eras = [
-    {
-      id: "early",
-      title: "Early History (1780-1899)",
-      description: "From the first non-Indigenous settler to the formation of crucial social justice alliances.",
-      content: [
-        { year: "1780", event: "Jean Baptiste Point du Sable becomes Chicago's first non-Indigenous settler." },
-        { year: "1833", event: "The Chicago Treaty forces concession of five million acres from Indigenous peoples." },
-        { year: "1837", event: "Chicago is officially incorporated after forced removal of native peoples." },
-        { year: "1889", event: "Hull House is founded by Jane Addams and Ellen Starr, shaping social reform." },
-        { year: "1899", event: "Ida B. Wells and Jane Addams form alliance for racial and social justice." }
-      ]
-    },
-    {
-      id: "twentieth",
-      title: "20th Century (1919-1994)",
-      description: "A century of struggle, resistance, and community organizing.",
-      content: [
-        { year: "1919", event: "Chicago Race Riot marks heightened racial tensions during the Great Migration." },
-        { year: "1939", event: "First modern community organization founded: Back of the Yard Neighborhood Council." },
-        { year: "1965", event: "The Chicago Freedom Movement addresses segregation and housing conditions." },
         { year: "1968", event: "The Rainbow Coalition forms, uniting across racial and ethnic lines." },
         { year: "1983", event: "Harold Washington becomes Chicago's first Black Mayor." }
       ]
