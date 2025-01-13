@@ -2,8 +2,16 @@ import { ArrowRight } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary to-primary/90 pt-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div 
+      className="min-h-screen flex items-center justify-center bg-cover bg-center relative"
+      style={{
+        backgroundImage: "url('/lovable-uploads/54e2169e-c661-47bb-96e2-524a2923a054.png')",
+      }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-primary/90" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="text-center animate-fade-up">
           <img 
             src="/lovable-uploads/09e2e5ca-1223-4ed9-9cba-52ac8db02a0b.png" 
