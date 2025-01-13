@@ -4,6 +4,7 @@ import { Programs } from "@/components/programs/ProgramsSection";
 import { Vision } from "@/components/vision/VisionSection";
 import { Contact } from "@/components/Contact";
 import { LeadCapture } from "@/components/LeadCapture";
+import { TheoryOfChange } from "@/components/TheoryOfChange";
 import { ChicagoHistory } from "@/components/ChicagoHistory";
 
 const Index = () => {
@@ -12,6 +13,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Vision />
+      <TheoryOfChange />
       <ChicagoHistory />
       <Programs />
       <LeadCapture />
