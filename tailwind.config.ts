@@ -25,22 +25,22 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#FFFFFF", // Light background color
-          foreground: "#222222", // Dark text color
+          DEFAULT: "#F1F1F1", // Light gray background color
+          foreground: "#333333", // Dark text color
         },
         secondary: {
-          DEFAULT: "#222222", // Dark color for contrast
+          DEFAULT: "#403E43", // Dark charcoal color for contrast
           foreground: "#FFFFFF", // Light text color
         },
         accent: {
           DEFAULT: "#94A187",
-          foreground: "#222222",
+          foreground: "#333333",
         },
         muted: {
           DEFAULT: "#F3F4F6",
-          foreground: "#6B7280",
+          foreground: "#555555",
         },
-        cream: "#FFFFFF", // Changed to white for light theme
+        cream: "#F1F0FB", // Soft gray background
       },
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
