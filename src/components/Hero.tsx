@@ -33,10 +33,13 @@ export const Hero = () => {
             Our mission is to increase the length and quality of lives in West Garfield Park by providing hope, prioritizing safety, and preventing displacement while adding valuable resources to our community.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-up" style={{ animationDelay: "400ms" }}>
-            <button className="group bg-secondary text-primary px-8 py-4 rounded-md hover:bg-secondary/90 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-lg">
+            <a 
+              href="#join-us" 
+              className="group bg-secondary text-primary px-8 py-4 rounded-md hover:bg-secondary/90 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-lg"
+            >
               Get Involved
               <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
-            </button>
+            </a>
             <button className="group border-2 border-secondary text-secondary px-8 py-4 rounded-md hover:bg-secondary/10 transition-all duration-300 transform hover:scale-105">
               Learn More
             </button>

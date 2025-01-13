@@ -26,9 +26,12 @@ export const Navbar = () => {
             <Link to="/about" className="text-secondary hover:text-secondary/80 transition-colors">About</Link>
             <a href="#programs" className="text-secondary hover:text-secondary/80 transition-colors">Programs</a>
             <a href="#contact" className="text-secondary hover:text-secondary/80 transition-colors">Contact</a>
-            <button className="bg-secondary text-primary px-4 py-2 rounded-md hover:bg-secondary/90 transition-colors">
+            <a 
+              href="#join-us" 
+              className="bg-secondary text-primary px-4 py-2 rounded-md hover:bg-secondary/90 transition-colors"
+            >
               Get Involved
-            </button>
+            </a>
           </div>
 
           <div className="md:hidden flex items-center">
@@ -48,9 +51,12 @@ export const Navbar = () => {
             <Link to="/about" className="block px-3 py-2 text-secondary hover:text-secondary/80">About</Link>
             <a href="#programs" className="block px-3 py-2 text-secondary hover:text-secondary/80">Programs</a>
             <a href="#contact" className="block px-3 py-2 text-secondary hover:text-secondary/80">Contact</a>
-            <button className="w-full text-left px-3 py-2 text-primary bg-secondary rounded-md">
+            <a 
+              href="#join-us" 
+              className="block px-3 py-2 text-primary bg-secondary rounded-md"
+            >
               Get Involved
-            </button>
+            </a>
           </div>
         </div>
       )}
