@@ -5,12 +5,16 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleHomeClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <nav className="bg-primary text-secondary-foreground fixed w-full z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex-shrink-0 flex items-center gap-3">
-            <Link to="/">
+            <Link to="/" onClick={handleHomeClick}>
               <img 
                 src="/lovable-uploads/09e2e5ca-1223-4ed9-9cba-52ac8db02a0b.png" 
                 alt="Legacy Families Logo" 
@@ -21,7 +25,7 @@ export const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-secondary hover:text-secondary/80 transition-colors">Home</Link>
+            <Link to="/" onClick={handleHomeClick} className="text-secondary hover:text-secondary/80 transition-colors">Home</Link>
             <Link to="/committee-members" className="text-secondary hover:text-secondary/80 transition-colors">Committee Members</Link>
             <Link to="/about" className="text-secondary hover:text-secondary/80 transition-colors">About</Link>
             <a href="#contact" className="text-secondary hover:text-secondary/80 transition-colors">Contact</a>
@@ -45,7 +49,7 @@ export const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-primary border-t border-secondary/20">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link to="/" className="block px-3 py-2 text-secondary hover:text-secondary/80">Home</Link>
+            <Link to="/" onClick={handleHomeClick} className="block px-3 py-2 text-secondary hover:text-secondary/80">Home</Link>
             <Link to="/committee-members" className="block px-3 py-2 text-secondary hover:text-secondary/80">Committee Members</Link>
             <Link to="/about" className="block px-3 py-2 text-secondary hover:text-secondary/80">About</Link>
             <a href="#contact" className="block px-3 py-2 text-secondary hover:text-secondary/80">Contact</a>
