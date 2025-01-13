@@ -1,5 +1,4 @@
 import { Lightbulb, Heart, MessageCircle } from "lucide-react";
-import { VisionCard } from "./VisionCard";
 
 export const Vision = () => {
   const visionPillars = [
@@ -31,13 +30,32 @@ export const Vision = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {visionPillars.map((pillar, index) => (
-            <VisionCard
-              key={pillar.title}
-              title={pillar.title}
-              description={pillar.description}
-              icon={pillar.icon}
-              image={pillar.image}
-            />
+            <div 
+              key={pillar.title} 
+              className="group bg-white p-8 rounded-2xl border border-primary/10 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              {pillar.image && (
+                <div className="mb-8 aspect-video w-full overflow-hidden rounded-xl">
+                  <img 
+                    src={pillar.image} 
+                    alt={pillar.title} 
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              )}
+              <div className="flex justify-center mb-6">
+                <div className="p-4 rounded-full bg-cream group-hover:bg-secondary/10 transition-colors duration-300">
+                  <pillar.icon className="w-8 h-8 text-primary group-hover:text-secondary transition-colors duration-300" />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-primary text-center group-hover:text-secondary transition-colors duration-300">
+                {pillar.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-center">
+                {pillar.description}
+              </p>
+            </div>
           ))}
         </div>
       </div>
