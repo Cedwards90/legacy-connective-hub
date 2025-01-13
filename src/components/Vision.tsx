@@ -18,6 +18,7 @@ export const Vision = () => {
       title: "Clear Communication",
       description: "We stress the importance of maintaining transparent and effective communication among all stakeholders. This includes mapping out our plans, ensuring everyone is aligned with our goals, and keeping the community informed about our progress.",
       icon: MessageCircle,
+      image: "/lovable-uploads/fff5e351-c3a8-43fd-b915-7438b32d1669.png",
     },
   ];
 
