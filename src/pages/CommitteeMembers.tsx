@@ -27,6 +27,15 @@ const committeeMembers: CommitteeMember[] = [
     image: "/lovable-uploads/78d80068-cc7d-4d71-9e28-aba8646668fd.png",
     role: "Director of Food Distribution for New Mount Pilgrim M.B.Church",
     bio: "I have been a resident of West Garfield Park All my life, 50 + years. In my job capacity, I have had the honor of supplying food to over 19, 000 families in West Garfield since 2020.\n\nI care deeply about my Community. I want to see West Garfield thrive. I want to do all I can to help bring services, opportunities and resources to West Garfield Park."
+  },
+  {
+    name: "Linda D. Thomas",
+    image: "/lovable-uploads/a3403f60-ba26-4684-8b22-0af8ac08f85c.png",
+    role: "Legacy Family Member",
+    education: [
+      "Malcolm X College - Associate Degree in Business Administrative Assistant"
+    ],
+    bio: "I am one of the Legacy Family's members that was created by Rev Dr. Marshall E. Hatch Sr and his son Rev. Marshall J. Hatch Jr. I have a Associate Degree in Business Administrative Assistant from Malcolm X College where I worked as an Administrator the last 18 months for the Vice President Mrs. Delinda Todd and then Mr. Roy Walker in the Athletic Department until I graduated in May 2013. My family moved to West Garfield Park in October 1969 and we all still reside here Today. Our Mission of the Legacy Families is to increase the length and quantity of the lives of the people in West Garfield Park by providing hope, Prioritizing safety, and preventing displacement while adding valuable resources to our community. My hobbies are designing and creating my own clothing, crocheting and furthering my education. I don't want to lose the use of my learning skills so I continue to educated myself all the time."
   }
 ];
 
