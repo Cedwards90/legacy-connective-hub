@@ -75,8 +75,8 @@ export const LeadCapture = () => {
     <section id="join-us" className="py-20 bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Join Our Community</h2>
-          <p className="text-lg text-primary/80 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1A1F2C] mb-4">Join Our Community</h2>
+          <p className="text-lg text-[#221F26] max-w-2xl mx-auto">
             Stay updated with our latest initiatives and community events. Join the Legacy Families of West Garfield Park.
           </p>
         </div>
@@ -88,9 +88,9 @@ export const LeadCapture = () => {
               placeholder="Zapier Webhook URL"
               value={webhookUrl}
               onChange={(e) => setWebhookUrl(e.target.value)}
-              className="mb-4"
+              className="mb-4 text-[#221F26]"
             />
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-[#403E43]">
               Set your Zapier webhook URL to start collecting leads
             </p>
           </div>
@@ -102,6 +102,7 @@ export const LeadCapture = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
+              className="text-[#221F26]"
             />
             <Input
               type="email"
@@ -109,16 +110,18 @@ export const LeadCapture = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              className="text-[#221F26]"
             />
             <Input
               type="tel"
               placeholder="Your Phone (Optional)"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
+              className="text-[#221F26]"
             />
             <Button
               type="submit"
-              className="w-full"
+              className="w-full bg-[#1A1F2C] text-white hover:bg-[#403E43]"
               disabled={isLoading}
             >
               {isLoading ? (

@@ -9,7 +9,6 @@ export const Hero = () => {
         backgroundPosition: "center 30%",
       }}
     >
-      {/* Enhanced gradient overlay with multiple layers */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/90 to-primary/80" />
       <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-primary/20" />
       
@@ -23,24 +22,24 @@ export const Hero = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent mix-blend-overlay" />
           </div>
-          <h1 className="text-4xl md:text-7xl font-bold text-secondary mb-6 tracking-tight animate-fade-up">
+          <h1 className="text-4xl md:text-7xl font-bold text-[#1A1F2C] mb-6 tracking-tight animate-fade-up">
             The Legacy Families of
-            <span className="block mt-2 bg-gradient-to-r from-secondary via-secondary to-accent bg-clip-text text-transparent">
+            <span className="block mt-2 bg-gradient-to-r from-[#1A1F2C] via-[#403E43] to-accent bg-clip-text text-transparent">
               West Garfield Park
             </span>
           </h1>
-          <p className="text-xl text-secondary/90 mb-12 max-w-3xl mx-auto leading-relaxed font-light animate-fade-up" style={{ animationDelay: "200ms" }}>
+          <p className="text-xl text-[#221F26] mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-up" style={{ animationDelay: "200ms" }}>
             Our mission is to increase the length and quality of lives in West Garfield Park by providing hope, prioritizing safety, and preventing displacement while adding valuable resources to our community.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-up" style={{ animationDelay: "400ms" }}>
             <a 
               href="#join-us" 
-              className="group bg-secondary text-primary px-8 py-4 rounded-md hover:bg-secondary/90 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-lg"
+              className="group bg-[#1A1F2C] text-white px-8 py-4 rounded-md hover:bg-[#403E43] transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-lg"
             >
               Get Involved
               <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
             </a>
-            <button className="group border-2 border-secondary text-secondary px-8 py-4 rounded-md hover:bg-secondary/10 transition-all duration-300 transform hover:scale-105">
+            <button className="group border-2 border-[#1A1F2C] text-[#1A1F2C] px-8 py-4 rounded-md hover:bg-[#1A1F2C]/10 transition-all duration-300 transform hover:scale-105">
               Learn More
             </button>
           </div>
