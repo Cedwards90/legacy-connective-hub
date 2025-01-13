@@ -8,7 +8,7 @@ const About = () => {
       <div 
         className="pt-20 bg-cover bg-center min-h-[50vh]"
         style={{
-          backgroundImage: "url('/lovable-uploads/70b23282-94fc-4e56-940f-3a07e2fdc537.png')",
+          backgroundImage: "url('/lovable-uploads/b8fa80c3-ec59-4d2d-9a11-be8dae597136.png')",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
