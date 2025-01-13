@@ -1,12 +1,24 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleHomeClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/');
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (
@@ -28,7 +40,7 @@ export const Navbar = () => {
             <Link to="/" onClick={handleHomeClick} className="text-secondary hover:text-secondary/80 transition-colors">Home</Link>
             <Link to="/committee-members" className="text-secondary hover:text-secondary/80 transition-colors">Committee Members</Link>
             <Link to="/about" className="text-secondary hover:text-secondary/80 transition-colors">About</Link>
-            <a href="#contact" className="text-secondary hover:text-secondary/80 transition-colors">Contact</a>
+            <button onClick={handleContactClick} className="text-secondary hover:text-secondary/80 transition-colors">Contact</button>
             <a 
               href="#join-us" 
               className="bg-secondary text-primary px-4 py-2 rounded-md hover:bg-secondary/90 transition-colors"
@@ -52,7 +64,7 @@ export const Navbar = () => {
             <Link to="/" onClick={handleHomeClick} className="block px-3 py-2 text-secondary hover:text-secondary/80">Home</Link>
             <Link to="/committee-members" className="block px-3 py-2 text-secondary hover:text-secondary/80">Committee Members</Link>
             <Link to="/about" className="block px-3 py-2 text-secondary hover:text-secondary/80">About</Link>
-            <a href="#contact" className="block px-3 py-2 text-secondary hover:text-secondary/80">Contact</a>
+            <button onClick={handleContactClick} className="block w-full text-left px-3 py-2 text-secondary hover:text-secondary/80">Contact</button>
             <a 
               href="#join-us" 
               className="block px-3 py-2 text-primary bg-secondary rounded-md"
