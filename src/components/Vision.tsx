@@ -41,20 +41,6 @@ export const Vision = () => {
                   />
                 </div>
               )}
-              {pillar.testimonial && (
-                <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-                  <img 
-                    src={pillar.testimonial.image}
-                    alt={pillar.testimonial.name}
-                    className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h4 className="text-lg font-semibold text-primary text-center mb-2">{pillar.testimonial.name}</h4>
-                  <p className="text-sm text-gray-500 text-center mb-4">{pillar.testimonial.role}</p>
-                  <blockquote className="text-gray-600 italic text-center">
-                    "{pillar.testimonial.quote}"
-                  </blockquote>
-                </div>
-              )}
             </div>
           ))}
         </div>
