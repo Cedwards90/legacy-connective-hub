@@ -38,7 +38,7 @@ const committeeMembers: CommitteeMember[] = [
     bio: "I am one of the Legacy Family's members that was created by Rev Dr. Marshall E. Hatch Sr and his son Rev. Marshall J. Hatch Jr. I have a Associate Degree in Business Administrative Assistant from Malcolm X College where I worked as an Administrator the last 18 months for the Vice President Mrs. Delinda Todd and then Mr. Roy Walker in the Athletic Department until I graduated in May 2013. My family moved to West Garfield Park in October 1969 and we all still reside here Today. Our Mission of the Legacy Families is to increase the length and quantity of the lives of the people in West Garfield Park by providing hope, Prioritizing safety, and preventing displacement while adding valuable resources to our community. My hobbies are designing and creating my own clothing, crocheting and furthering my education. I don't want to lose the use of my learning skills so I continue to educated myself all the time."
   },
   {
-    name: "Tosheika",
+    name: "Tosheika Thomas",
     image: "/lovable-uploads/1c58d5ec-b680-4973-ab12-fecd4a0b183b.png",
     role: "Treasurer, Legacy Family's Community",
     education: [
