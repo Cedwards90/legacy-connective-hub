@@ -13,10 +13,12 @@ export const Navbar = () => {
   const handleContactClick = (e: React.MouseEvent) => {
     e.preventDefault();
     navigate('/');
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (
