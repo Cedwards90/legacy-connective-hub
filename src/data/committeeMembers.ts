@@ -22,7 +22,7 @@ export const committeeMembers: CommitteeMember[] = [
     name: "May Henderson",
     image: "/lovable-uploads/78d80068-cc7d-4d71-9e28-aba8646668fd.png",
     role: "Director of Food Distribution for New Mount Pilgrim M.B.Church",
-    bio: "I have been a resident of West Garfield Park my entire life, spanning over 50 years. In my professional role, I have had the honor of providing food to more than 19,000 families in West Garfield since 2020.\n\nI care deeply about our community and want to see West Garfield thrive. My goal is to do everything possible to help bring services, opportunities, and resources to West Garfield Park."
+    bio: "I have been a proud resident of West Garfield Park my entire life, spanning over 50 years. Deeply connected to this community, I have dedicated my professional efforts to making a tangible difference. Since 2020, I have had the honor of providing food to more than 19,000 families in West Garfield Park, a role that has reinforced my commitment to serving our neighbors and addressing the challenges we face together.\n\nI care deeply about the well-being and future of our community and am driven by a vision of seeing West Garfield Park thrive. My mission is to bring essential services, meaningful opportunities, and vital resources to our neighborhood, ensuring that every resident has the support they need to flourish. I believe that by working together, we can create a stronger, more resilient West Garfield Park where every individual and family can thrive."
   },
   {
     name: "Linda D. Thomas",
