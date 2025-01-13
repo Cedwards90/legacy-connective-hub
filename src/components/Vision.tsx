@@ -6,6 +6,7 @@ export const Vision = () => {
       title: "Build Power",
       description: "We aim to empower the Legacy Family and community members to have a direct influence on the development of our neighborhood.",
       icon: Lightbulb,
+      image: "/lovable-uploads/dc2a4ac6-b8d8-4b8d-9986-afbb8613299e.png"
     },
     {
       title: "Preserve the Collaborative's Vision",
@@ -30,7 +31,16 @@ export const Vision = () => {
                 <pillar.icon className="w-12 h-12 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-primary">{pillar.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{pillar.description}</p>
+              <p className="text-gray-600 leading-relaxed mb-4">{pillar.description}</p>
+              {pillar.image && (
+                <div className="mt-4">
+                  <img 
+                    src={pillar.image} 
+                    alt="Community members working together" 
+                    className="w-full h-auto rounded-lg shadow-md"
+                  />
+                </div>
+              )}
             </div>
           ))}
         </div>
