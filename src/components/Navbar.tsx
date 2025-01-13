@@ -24,7 +24,6 @@ export const Navbar = () => {
             <Link to="/" className="text-secondary hover:text-secondary/80 transition-colors">Home</Link>
             <Link to="/committee-members" className="text-secondary hover:text-secondary/80 transition-colors">Committee Members</Link>
             <Link to="/about" className="text-secondary hover:text-secondary/80 transition-colors">About</Link>
-            <a href="#programs" className="text-secondary hover:text-secondary/80 transition-colors">Programs</a>
             <a href="#contact" className="text-secondary hover:text-secondary/80 transition-colors">Contact</a>
             <a 
               href="#join-us" 
@@ -49,7 +48,6 @@ export const Navbar = () => {
             <Link to="/" className="block px-3 py-2 text-secondary hover:text-secondary/80">Home</Link>
             <Link to="/committee-members" className="block px-3 py-2 text-secondary hover:text-secondary/80">Committee Members</Link>
             <Link to="/about" className="block px-3 py-2 text-secondary hover:text-secondary/80">About</Link>
-            <a href="#programs" className="block px-3 py-2 text-secondary hover:text-secondary/80">Programs</a>
             <a href="#contact" className="block px-3 py-2 text-secondary hover:text-secondary/80">Contact</a>
             <a 
               href="#join-us" 
