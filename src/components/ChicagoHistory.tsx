@@ -99,7 +99,7 @@ export const ChicagoHistory = () => {
                           <img
                             src={era.image.src}
                             alt={era.image.alt}
-                            className="w-full h-[500px] object-cover rounded-lg"
+                            className="w-full h-[700px] object-cover object-center rounded-lg"
                           />
                           <div className="mt-3 text-sm text-[#403E43] text-center italic">
                             {era.image.caption}
