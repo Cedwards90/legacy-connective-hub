@@ -1,10 +1,11 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleHomeClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -19,6 +20,25 @@ export const Navbar = () => {
         contactSection.scrollIntoView({ behavior: 'smooth' });
       }
     }, 100);
+  };
+
+  const handleGetInvolvedClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        const joinSection = document.getElementById('join-us');
+        if (joinSection) {
+          joinSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const joinSection = document.getElementById('join-us');
+      if (joinSection) {
+        joinSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   };
 
   return (
@@ -41,12 +61,12 @@ export const Navbar = () => {
             <Link to="/committee-members" className="text-secondary hover:text-secondary/80 transition-colors">Committee Members</Link>
             <Link to="/about" className="text-secondary hover:text-secondary/80 transition-colors">About</Link>
             <button onClick={handleContactClick} className="text-secondary hover:text-secondary/80 transition-colors">Contact</button>
-            <a 
-              href="#join-us" 
+            <button 
+              onClick={handleGetInvolvedClick}
               className="bg-secondary text-primary px-4 py-2 rounded-md hover:bg-secondary/90 transition-colors"
             >
               Get Involved
-            </a>
+            </button>
           </div>
 
           <div className="md:hidden flex items-center">
@@ -65,12 +85,12 @@ export const Navbar = () => {
             <Link to="/committee-members" className="block px-3 py-2 text-secondary hover:text-secondary/80">Committee Members</Link>
             <Link to="/about" className="block px-3 py-2 text-secondary hover:text-secondary/80">About</Link>
             <button onClick={handleContactClick} className="block w-full text-left px-3 py-2 text-secondary hover:text-secondary/80">Contact</button>
-            <a 
-              href="#join-us" 
-              className="block px-3 py-2 text-primary bg-secondary rounded-md"
+            <button 
+              onClick={handleGetInvolvedClick}
+              className="block w-full text-left px-3 py-2 text-primary bg-secondary rounded-md"
             >
               Get Involved
-            </a>
+            </button>
           </div>
         </div>
       )}
