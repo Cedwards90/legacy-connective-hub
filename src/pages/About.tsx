@@ -15,7 +15,16 @@ const About = () => {
           minHeight: "600px"
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-black/60">
+        <div 
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+          style={{
+            backgroundImage: "url('/lovable-uploads/a6626067-ab8f-4e94-a369-b14666c888a0.png')",
+            backgroundPosition: "center",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundColor: "rgba(0, 0, 0, 0.85)"
+          }}
+        >
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 font-playfair tracking-tight text-center">
             About The Legacy Families
           </h1>
