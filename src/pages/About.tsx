@@ -6,24 +6,16 @@ const About = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       <div 
-        className="pt-20"
+        className="pt-20 bg-cover bg-center min-h-[50vh]"
         style={{
+          backgroundImage: "url('/lovable-uploads/b8fa80c3-ec59-4d2d-9a11-be8dae597136.png')",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           minHeight: "600px"
         }}
       >
-        <div 
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
-          style={{
-            backgroundImage: "url('/lovable-uploads/a6626067-ab8f-4e94-a369-b14666c888a0.png')",
-            backgroundPosition: "center",
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundColor: "rgba(0, 0, 0, 0.65)"
-          }}
-        >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-black/60">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 font-playfair tracking-tight text-center">
             About The Legacy Families
           </h1>
@@ -46,7 +38,7 @@ const About = () => {
                 alt="Legacy Family Committee members distributing items at the turkey giveaway"
                 className="w-full h-[400px] object-cover rounded-lg shadow-lg"
               />
-              <p className="text-sm text-gray-600 text-center">Legacy Family members organizing and distributing turkeys, hats, and gloves at the community turkey giveaway event</p>
+              <p className="text-sm text-gray-600 text-center">Legacy Family members organizing and distributing items at the community turkey giveaway event</p>
             </div>
             <div className="space-y-4">
               <img 
