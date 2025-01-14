@@ -30,9 +30,11 @@ export const CommitteeMembers = () => {
                 <img
                   src="/lovable-uploads/a29c9102-3a33-4c51-8ef6-2fcbdab5730e.png"
                   alt="Legacy Families Committee Event"
-                  className="w-full object-cover"
+                  className="w-full object-cover object-center"
                   style={{
-                    clipPath: 'inset(10% 0 10% 0)' // Crops out the white portion from both top and bottom
+                    clipPath: 'inset(10% 0 10% 0)', // Crops out the white portion from both top and bottom
+                    imageRendering: 'crisp-edges',
+                    maxHeight: '500px'
                   }}
                 />
               </div>
