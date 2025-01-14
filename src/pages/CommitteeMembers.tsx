@@ -32,7 +32,7 @@ export const CommitteeMembers = () => {
                   alt="Legacy Families Committee Event"
                   className="w-full object-cover"
                   style={{
-                    clipPath: 'inset(10% 0 0 0)' // Crops out the white portion from the top
+                    clipPath: 'inset(10% 0 10% 0)' // Crops out the white portion from both top and bottom
                   }}
                 />
               </div>
