@@ -7,13 +7,25 @@ import { ChicagoHistory } from "@/components/ChicagoHistory";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-primary via-cream to-white">
       <Navbar />
       <Hero />
-      <Vision />
-      <ChicagoHistory />
-      <LeadCapture />
-      <Contact />
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
+        <Vision />
+      </div>
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cream/10 to-transparent pointer-events-none" />
+        <ChicagoHistory />
+      </div>
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
+        <LeadCapture />
+      </div>
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cream/10 to-transparent pointer-events-none" />
+        <Contact />
+      </div>
     </div>
   );
 };
