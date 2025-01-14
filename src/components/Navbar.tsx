@@ -11,6 +11,10 @@ export const Navbar = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleAboutClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleContactClick = (e: React.MouseEvent) => {
     e.preventDefault();
     navigate('/');
@@ -59,7 +63,7 @@ export const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" onClick={handleHomeClick} className="text-secondary hover:text-secondary/80 transition-colors">Home</Link>
             <Link to="/committee-members" className="text-secondary hover:text-secondary/80 transition-colors">Committee Members</Link>
-            <Link to="/about" className="text-secondary hover:text-secondary/80 transition-colors">About</Link>
+            <Link to="/about" onClick={handleAboutClick} className="text-secondary hover:text-secondary/80 transition-colors">About</Link>
             <button onClick={handleContactClick} className="text-secondary hover:text-secondary/80 transition-colors">Contact</button>
             <button 
               onClick={handleGetInvolvedClick}
@@ -83,7 +87,7 @@ export const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link to="/" onClick={handleHomeClick} className="block px-3 py-2 text-secondary hover:text-secondary/80">Home</Link>
             <Link to="/committee-members" className="block px-3 py-2 text-secondary hover:text-secondary/80">Committee Members</Link>
-            <Link to="/about" className="block px-3 py-2 text-secondary hover:text-secondary/80">About</Link>
+            <Link to="/about" onClick={handleAboutClick} className="block px-3 py-2 text-secondary hover:text-secondary/80">About</Link>
             <button onClick={handleContactClick} className="block w-full text-left px-3 py-2 text-secondary hover:text-secondary/80">Contact</button>
             <button 
               onClick={handleGetInvolvedClick}
