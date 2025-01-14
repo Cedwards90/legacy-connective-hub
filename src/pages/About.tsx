@@ -37,7 +37,7 @@ const About = () => {
               <img 
                 src="/lovable-uploads/6861696e-582a-48fc-bab2-245cc63e17bb.png" 
                 alt="Legacy Family Committee members distributing items at the turkey giveaway"
-                className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+                className="w-full h-[500px] object-cover rounded-lg shadow-lg"
               />
               <p className="text-sm text-gray-600 text-center">Legacy Family members organizing and distributing items at the community turkey giveaway event</p>
             </div>
@@ -45,7 +45,7 @@ const About = () => {
               <img 
                 src="/lovable-uploads/d3434a79-b907-410a-9273-f0b71cd68b72.png" 
                 alt="Community members receiving items at the turkey giveaway"
-                className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+                className="w-full h-[500px] object-cover rounded-lg shadow-lg"
               />
               <p className="text-sm text-gray-600 text-center">Community members participating in the turkey giveaway, demonstrating our commitment to food security initiatives</p>
             </div>
@@ -63,7 +63,7 @@ const About = () => {
               <img 
                 src="/lovable-uploads/ad654432-0f5d-4fb0-9b2c-7df95d43195b.png" 
                 alt="Legacy Family Committee resource fair booth close-up"
-                className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+                className="w-full h-[500px] object-cover rounded-lg shadow-lg"
               />
               <p className="text-sm text-gray-600 text-center">A closer view of the Legacy Family Committee's booth, showcasing our community engagement and resources</p>
             </div>
@@ -71,7 +71,7 @@ const About = () => {
               <img 
                 src="/lovable-uploads/eb303c43-d04b-4edc-8802-6f849c14196d.png" 
                 alt="Resource fair overview"
-                className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+                className="w-full h-[500px] object-cover rounded-lg shadow-lg"
               />
               <p className="text-sm text-gray-600 text-center">A wider view of our community resource fair, showing multiple service providers and community members gathering</p>
             </div>
