@@ -41,8 +41,8 @@ export const ChicagoHistory = () => {
         { year: "2023", event: "Legacy Families of West Garfield Park continues the tradition of community organizing." }
       ],
       image: {
-        src: "/lovable-uploads/e3c74e37-8b0d-4b73-97ef-08c2c310d765.png",
-        alt: "Legacy Family Committee members at community event",
+        src: "/lovable-uploads/0189e19c-3637-4cb2-a62f-b43bb391c108.png",
+        alt: "Legacy Family Committee members at a community outreach event",
         caption: "The Legacy Family Committee engaging with the community at an outreach event"
       }
     }
