@@ -16,7 +16,7 @@ export const CommitteeMembers = () => {
             Our Committee Members
           </h1>
 
-          <div className="max-w-4xl mx-auto mb-16 p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg animate-fade-up">
+          <div className="max-w-4xl mx-auto mb-16 p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg animate-fade-up text-center">
             <p className="text-lg leading-relaxed text-gray-800">
               The Legacy Families of West Garfield Park are generational residents who have witnessed both growth and decline in their neighborhood. They have seen the impact of decisions made without community input, leading to displacement and poverty. Concerned about history repeating itself with the Sankofa Wellness Village, they seek to ensure their voices are heard and to involve the greater community in decision-making. Thus, they embarked on a journey of organizing for a better future.
             </p>
