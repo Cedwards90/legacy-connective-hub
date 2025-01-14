@@ -53,6 +53,32 @@ const About = () => {
             Our turkey giveaway event is just one example of how we put our Theory of Change into action, addressing food security while building community connections and supporting our neighbors.
           </p>
         </div>
+
+        {/* Resource Fair Images Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-gray-50">
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#1A1F2C]">Community Resource Fair</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <img 
+                src="/lovable-uploads/bb29d080-bacb-46e6-b848-583c2ffffac3.png" 
+                alt="Legacy Family Committee resource fair booth"
+                className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+              />
+              <p className="text-sm text-gray-600 text-center">Legacy Family Committee members engaging with the community at our resource fair booth</p>
+            </div>
+            <div className="space-y-4">
+              <img 
+                src="/lovable-uploads/5e1b7a87-a0a2-4200-804d-6f5083454dc9.png" 
+                alt="Resource fair overview"
+                className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+              />
+              <p className="text-sm text-gray-600 text-center">A view of our community resource fair, bringing vital services and information to West Garfield Park residents</p>
+            </div>
+          </div>
+          <p className="text-lg text-center mt-8 max-w-3xl mx-auto text-gray-700">
+            Our community resource fair exemplifies our Theory of Change in action by connecting residents with essential services, educational opportunities, and community resources. This event demonstrates our commitment to building a stronger, more informed, and better-connected West Garfield Park community.
+          </p>
+        </div>
       </div>
     </div>
   );
