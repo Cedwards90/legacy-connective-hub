@@ -26,6 +26,7 @@ const About = () => {
             Our Theory of Change is actively demonstrated through our daily work in the community. From providing shelter and housing assistance to supporting mental health initiatives, each pillar of our approach is carefully implemented to create lasting positive change. Through financial literacy programs, wellness activities, and spiritual growth opportunities, we're building a stronger, more resilient West Garfield Park that honors both our heritage and our future.
           </p>
         </div>
+
         <TheoryOfChange />
         
         {/* Turkey Giveaway Images Section */}
@@ -60,19 +61,19 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <img 
-                src="/lovable-uploads/bb29d080-bacb-46e6-b848-583c2ffffac3.png" 
-                alt="Legacy Family Committee resource fair booth"
+                src="/lovable-uploads/ad654432-0f5d-4fb0-9b2c-7df95d43195b.png" 
+                alt="Legacy Family Committee resource fair booth close-up"
                 className="w-full h-[400px] object-cover rounded-lg shadow-lg"
               />
-              <p className="text-sm text-gray-600 text-center">Legacy Family Committee members engaging with the community at our resource fair booth</p>
+              <p className="text-sm text-gray-600 text-center">A closer view of the Legacy Family Committee's booth, showcasing our community engagement and resources</p>
             </div>
             <div className="space-y-4">
               <img 
-                src="/lovable-uploads/5e1b7a87-a0a2-4200-804d-6f5083454dc9.png" 
+                src="/lovable-uploads/eb303c43-d04b-4edc-8802-6f849c14196d.png" 
                 alt="Resource fair overview"
                 className="w-full h-[400px] object-cover rounded-lg shadow-lg"
               />
-              <p className="text-sm text-gray-600 text-center">A view of our community resource fair, bringing vital services and information to West Garfield Park residents</p>
+              <p className="text-sm text-gray-600 text-center">A wider view of our community resource fair, showing multiple service providers and community members gathering</p>
             </div>
           </div>
           <p className="text-lg text-center mt-8 max-w-3xl mx-auto text-gray-700">
