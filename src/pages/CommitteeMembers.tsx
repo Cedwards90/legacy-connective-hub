@@ -19,6 +19,27 @@ export const CommitteeMembers = () => {
             Meet the dedicated individuals who are working to preserve and enhance the West Garfield Park community.
           </p>
           <MemberGrid />
+          
+          <div className="mt-20 max-w-4xl mx-auto">
+            <div className="relative">
+              {/* Decorative border using site's color scheme */}
+              <div className="absolute inset-0 -m-4 bg-gradient-to-r from-secondary via-accent to-secondary opacity-20 rounded-2xl blur-sm"></div>
+              
+              {/* Image container with border */}
+              <div className="relative rounded-xl overflow-hidden border-4 border-accent/20 shadow-xl">
+                <img
+                  src="/lovable-uploads/307440c7-195c-4389-aba2-1cb0e3f64c09.png"
+                  alt="Legacy Families Committee Event"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              
+              {/* Caption */}
+              <p className="text-center mt-4 text-gray-600 italic">
+                The Legacy Families Committee serving our community through outreach and engagement
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
