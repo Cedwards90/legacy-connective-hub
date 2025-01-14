@@ -14,17 +14,17 @@ export const MemberGrid = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {committeeMembers.map((member) => (
-        <div key={member.name} className="flex flex-col gap-6">
+        <div key={member.name} className="flex flex-col gap-4">
           <button 
             onClick={() => {
               setSelectedMember(member);
               setIsOpen(true);
             }}
-            className="w-full cursor-pointer transition-transform duration-300 hover:scale-[1.02] bg-white rounded-xl shadow-md p-4"
+            className="w-full cursor-pointer transition-transform duration-300 hover:scale-[1.02] bg-white rounded-xl shadow-md p-3"
           >
-            <div className="relative aspect-[4/5] w-full max-w-[300px] mx-auto overflow-hidden rounded-2xl">
+            <div className="relative aspect-square w-full max-w-[200px] mx-auto overflow-hidden rounded-lg">
               <img
                 src={member.image}
                 alt={member.name}
@@ -36,11 +36,11 @@ export const MemberGrid = () => {
                 }}
               />
             </div>
-            <div className="mt-4 space-y-2">
-              <h2 className="text-2xl font-playfair font-bold text-[#1A1F2C]">
+            <div className="mt-3 space-y-1">
+              <h2 className="text-lg font-playfair font-bold text-[#1A1F2C]">
                 {member.name}
               </h2>
-              <p className="text-lg font-medium text-[#403E43]">
+              <p className="text-sm font-medium text-[#403E43]">
                 {member.role}
               </p>
             </div>
