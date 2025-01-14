@@ -6,16 +6,24 @@ const About = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       <div 
-        className="pt-20 bg-cover bg-center min-h-[50vh]"
+        className="pt-20"
         style={{
-          backgroundImage: "url('/lovable-uploads/b8fa80c3-ec59-4d2d-9a11-be8dae597136.png')",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           minHeight: "600px"
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-black/60">
+        <div 
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+          style={{
+            backgroundImage: "url('/lovable-uploads/a6626067-ab8f-4e94-a369-b14666c888a0.png')",
+            backgroundPosition: "center",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundColor: "rgba(0, 0, 0, 0.65)"
+          }}
+        >
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 font-playfair tracking-tight text-center">
             About The Legacy Families
           </h1>
@@ -28,41 +36,6 @@ const About = () => {
         </div>
         <TheoryOfChange />
         
-        {/* Video Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-white">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#1A1F2C]">Our Impact in Action</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Example of embedding a YouTube video */}
-            <div className="space-y-4">
-              <div className="relative pb-[56.25%] h-0">
-                <iframe 
-                  className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-                  src="https://www.youtube.com/embed/your-video-id"
-                  title="Legacy Families Community Impact"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-              <p className="text-sm text-gray-600 text-center">Watch our community impact in action</p>
-            </div>
-            
-            {/* Example of using HTML5 video player for local videos */}
-            <div className="space-y-4">
-              <div className="relative rounded-lg shadow-lg overflow-hidden">
-                <video 
-                  className="w-full"
-                  controls
-                  poster="/path-to-your-thumbnail.jpg"
-                >
-                  <source src="/path-to-your-video.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <p className="text-sm text-gray-600 text-center">Highlights from our recent community events</p>
-            </div>
-          </div>
-        </div>
-
         {/* Turkey Giveaway Images Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-white">
           <h2 className="text-3xl font-bold text-center mb-12 text-[#1A1F2C]">Community in Action: Turkey Giveaway Event</h2>
@@ -73,7 +46,7 @@ const About = () => {
                 alt="Legacy Family Committee members distributing items at the turkey giveaway"
                 className="w-full h-[400px] object-cover rounded-lg shadow-lg"
               />
-              <p className="text-sm text-gray-600 text-center">Legacy Family members organizing and distributing items at the community turkey giveaway event</p>
+              <p className="text-sm text-gray-600 text-center">Legacy Family members organizing and distributing turkeys, hats, and gloves at the community turkey giveaway event</p>
             </div>
             <div className="space-y-4">
               <img 
