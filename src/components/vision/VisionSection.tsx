@@ -26,9 +26,16 @@ export const Vision = () => {
   return (
     <section className="py-32 bg-gradient-to-b from-cream to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-black mb-16 tracking-tight">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-black mb-8 tracking-tight">
           Our Vision
         </h2>
+        
+        <div className="max-w-4xl mx-auto mb-16 p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg animate-fade-up">
+          <p className="text-lg leading-relaxed text-gray-800">
+            Chicago's deep-seated segregation persists, echoing injustices from 62 years ago. Community action, driven by voices in decision-making, is crucial for change. Organizing locally in West Garfield Park, without waiting for government or policy shifts, empowers residents to create impact. Unity and engagement, fueled by connection and shared purpose, are key to sustaining efforts and fostering growth.
+          </p>
+        </div>
+
         <div className="grid md:grid-cols-3 gap-8">
           {visionPillars.map((pillar, index) => (
             <VisionCard
