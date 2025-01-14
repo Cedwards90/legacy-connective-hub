@@ -27,6 +27,32 @@ const About = () => {
           </p>
         </div>
         <TheoryOfChange />
+        
+        {/* Turkey Giveaway Images Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-white">
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#1A1F2C]">Community in Action: Turkey Giveaway Event</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <img 
+                src="/lovable-uploads/6861696e-582a-48fc-bab2-245cc63e17bb.png" 
+                alt="Legacy Family Committee members distributing items at the turkey giveaway"
+                className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+              />
+              <p className="text-sm text-gray-600 text-center">Legacy Family members organizing and distributing items at the community turkey giveaway event</p>
+            </div>
+            <div className="space-y-4">
+              <img 
+                src="/lovable-uploads/d3434a79-b907-410a-9273-f0b71cd68b72.png" 
+                alt="Community members receiving items at the turkey giveaway"
+                className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+              />
+              <p className="text-sm text-gray-600 text-center">Community members participating in the turkey giveaway, demonstrating our commitment to food security initiatives</p>
+            </div>
+          </div>
+          <p className="text-lg text-center mt-8 max-w-3xl mx-auto text-gray-700">
+            Our turkey giveaway event is just one example of how we put our Theory of Change into action, addressing food security while building community connections and supporting our neighbors.
+          </p>
+        </div>
       </div>
     </div>
   );
