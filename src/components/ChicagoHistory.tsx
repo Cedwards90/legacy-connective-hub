@@ -41,9 +41,9 @@ export const ChicagoHistory = () => {
         { year: "2023", event: "Legacy Families of West Garfield Park continues the tradition of community organizing." }
       ],
       image: {
-        src: "/lovable-uploads/0bf9a9a4-41f8-4abe-b550-4e6f222c191a.png",
-        alt: "Legacy Family Committee members at resource fair",
-        caption: "The Legacy Family Committee hosts its first annual resource fair in West Garfield Park at New Mt Pilgrim MB Church"
+        src: "/lovable-uploads/d4d94743-f383-4294-b345-71a33c6d0d1e.png",
+        alt: "Legacy Family Committee members at community event",
+        caption: "The Legacy Family Committee engaging with the community at an outreach event"
       }
     }
   ];
