@@ -23,19 +23,19 @@ export const Hero = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent mix-blend-overlay" />
           </div>
-          <h1 className="text-4xl md:text-7xl font-bold text-[#1A1F2C] mb-6 tracking-tight animate-fade-up">
+          <h1 className="heading-large text-[#1A1F2C] mb-8 animate-fade-up">
             The Legacy Families of
-            <span className="block mt-2 bg-gradient-to-r from-[#1A1F2C] via-[#403E43] to-accent bg-clip-text text-transparent">
+            <span className="block mt-4 bg-gradient-to-r from-[#1A1F2C] via-[#403E43] to-accent bg-clip-text text-transparent">
               West Garfield Park
             </span>
           </h1>
-          <p className="text-xl text-[#221F26] mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-up" style={{ animationDelay: "200ms" }}>
+          <p className="body-large text-[#221F26] mb-12 max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: "200ms" }}>
             Our mission is to increase the length and quality of lives in West Garfield Park by providing hope, prioritizing safety, and preventing displacement while adding valuable resources to our community.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-up" style={{ animationDelay: "400ms" }}>
             <a 
               href="#join-us" 
-              className="group bg-[#1A1F2C] text-white px-8 py-4 rounded-md hover:bg-[#403E43] transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-lg"
+              className="group bg-[#1A1F2C] text-white px-8 py-4 rounded-md hover:bg-[#403E43] transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-lg text-lg font-medium"
             >
               Get Involved
               <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
@@ -43,7 +43,7 @@ export const Hero = () => {
             <Link 
               to="/about"
               onClick={() => window.scrollTo(0, 0)}
-              className="group border-2 border-[#1A1F2C] text-[#1A1F2C] px-8 py-4 rounded-md hover:bg-[#1A1F2C]/10 transition-all duration-300 transform hover:scale-105"
+              className="group border-2 border-[#1A1F2C] text-[#1A1F2C] px-8 py-4 rounded-md hover:bg-[#1A1F2C]/10 transition-all duration-300 transform hover:scale-105 text-lg font-medium"
             >
               Learn More
             </Link>
