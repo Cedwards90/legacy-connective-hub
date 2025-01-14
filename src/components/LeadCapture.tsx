@@ -70,16 +70,16 @@ export const LeadCapture = () => {
   };
 
   return (
-    <section id="join-us" className="py-20 bg-cream">
+    <section id="join-us" className="py-32 bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1A1F2C] mb-4">Join Our Community</h2>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1A1F2C] mb-6">Join Our Community</h2>
           <p className="text-lg text-[#221F26] max-w-2xl mx-auto">
             Stay updated with our latest initiatives and community events. Join the Legacy Families of West Garfield Park.
           </p>
         </div>
 
-        <div className="max-w-md mx-auto">
+        <div className="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-lg">
           <WebhookInput webhookUrl={webhookUrl} setWebhookUrl={setWebhookUrl} />
           <LeadForm
             name={name}
