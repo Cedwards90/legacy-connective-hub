@@ -28,6 +28,41 @@ const About = () => {
         </div>
         <TheoryOfChange />
         
+        {/* Video Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-white">
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#1A1F2C]">Our Impact in Action</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Example of embedding a YouTube video */}
+            <div className="space-y-4">
+              <div className="relative pb-[56.25%] h-0">
+                <iframe 
+                  className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                  src="https://www.youtube.com/embed/your-video-id"
+                  title="Legacy Families Community Impact"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <p className="text-sm text-gray-600 text-center">Watch our community impact in action</p>
+            </div>
+            
+            {/* Example of using HTML5 video player for local videos */}
+            <div className="space-y-4">
+              <div className="relative rounded-lg shadow-lg overflow-hidden">
+                <video 
+                  className="w-full"
+                  controls
+                  poster="/path-to-your-thumbnail.jpg"
+                >
+                  <source src="/path-to-your-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <p className="text-sm text-gray-600 text-center">Highlights from our recent community events</p>
+            </div>
+          </div>
+        </div>
+
         {/* Turkey Giveaway Images Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-white">
           <h2 className="text-3xl font-bold text-center mb-12 text-[#1A1F2C]">Community in Action: Turkey Giveaway Event</h2>
