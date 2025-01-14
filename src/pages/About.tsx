@@ -31,9 +31,9 @@ const About = () => {
         
         {/* Turkey Giveaway Images Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-white">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#1A1F2C]">Community in Action: Turkey Giveaway Event</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
+          <h2 className="text-3xl font-bold text-center mb-8 text-[#1A1F2C]">Community in Action: Turkey Giveaway Event</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="space-y-2">
               <img 
                 src="/lovable-uploads/6861696e-582a-48fc-bab2-245cc63e17bb.png" 
                 alt="Legacy Family Committee members distributing items at the turkey giveaway"
@@ -41,7 +41,7 @@ const About = () => {
               />
               <p className="text-sm text-gray-600 text-center">Legacy Family members organizing and distributing items at the community turkey giveaway event</p>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-2">
               <img 
                 src="/lovable-uploads/d3434a79-b907-410a-9273-f0b71cd68b72.png" 
                 alt="Community members receiving items at the turkey giveaway"
@@ -57,9 +57,9 @@ const About = () => {
 
         {/* Resource Fair Images Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-gray-50">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#1A1F2C]">Community Resource Fair</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
+          <h2 className="text-3xl font-bold text-center mb-8 text-[#1A1F2C]">Community Resource Fair</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="space-y-2">
               <img 
                 src="/lovable-uploads/ad654432-0f5d-4fb0-9b2c-7df95d43195b.png" 
                 alt="Legacy Family Committee resource fair booth close-up"
@@ -67,7 +67,7 @@ const About = () => {
               />
               <p className="text-sm text-gray-600 text-center">A closer view of the Legacy Family Committee's booth, showcasing our community engagement and resources</p>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-2">
               <img 
                 src="/lovable-uploads/eb303c43-d04b-4edc-8802-6f849c14196d.png" 
                 alt="Resource fair overview"
