@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Users, Scale, Heart, Leaf, MessageSquare, GraduationCap } from "lucide-react";
 import { VisionCard } from "./VisionCard";
 
 export const Vision = () => {
@@ -31,12 +31,36 @@ export const Vision = () => {
         </div>
 
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
-          <VisionCard title="Empowerment" description="Fostering community leadership and engagement." />
-          <VisionCard title="Equity" description="Ensuring fair access to resources and opportunities." />
-          <VisionCard title="Unity" description="Building strong connections among residents." />
-          <VisionCard title="Sustainability" description="Creating lasting change through collective action." />
-          <VisionCard title="Advocacy" description="Championing the voices of our community." />
-          <VisionCard title="Education" description="Providing knowledge and skills for empowerment." />
+          <VisionCard 
+            title="Empowerment" 
+            description="Fostering community leadership and engagement." 
+            icon={Users}
+          />
+          <VisionCard 
+            title="Equity" 
+            description="Ensuring fair access to resources and opportunities." 
+            icon={Scale}
+          />
+          <VisionCard 
+            title="Unity" 
+            description="Building strong connections among residents." 
+            icon={Heart}
+          />
+          <VisionCard 
+            title="Sustainability" 
+            description="Creating lasting change through collective action." 
+            icon={Leaf}
+          />
+          <VisionCard 
+            title="Advocacy" 
+            description="Championing the voices of our community." 
+            icon={MessageSquare}
+          />
+          <VisionCard 
+            title="Education" 
+            description="Providing knowledge and skills for empowerment." 
+            icon={GraduationCap}
+          />
         </div>
       </div>
     </section>
