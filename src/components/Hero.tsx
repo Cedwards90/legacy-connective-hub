@@ -10,8 +10,7 @@ export const Hero = () => {
         backgroundPosition: "center 30%",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/90 to-primary/80" />
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-primary/20" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/98 via-primary/95 to-primary/90 backdrop-blur-[2px]" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="text-center">
@@ -19,23 +18,22 @@ export const Hero = () => {
             <img 
               src="/lovable-uploads/09e2e5ca-1223-4ed9-9cba-52ac8db02a0b.png" 
               alt="Legacy Families Logo" 
-              className="w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 mx-auto object-contain mix-blend-screen animate-float"
+              className="w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 mx-auto object-contain mix-blend-multiply animate-float"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent mix-blend-overlay" />
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1A1F2C] mb-6 sm:mb-8 animate-fade-up leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-secondary mb-6 sm:mb-8 animate-fade-up leading-tight tracking-tight">
             The Legacy Families of
-            <span className="block mt-2 sm:mt-4 bg-gradient-to-r from-[#1A1F2C] via-[#403E43] to-accent bg-clip-text text-transparent">
+            <span className="block mt-2 sm:mt-4 bg-gradient-to-r from-secondary via-secondary to-accent bg-clip-text text-transparent">
               West Garfield Park
             </span>
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-[#221F26] mb-8 sm:mb-12 max-w-3xl mx-auto animate-fade-up leading-relaxed" style={{ animationDelay: "200ms" }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-secondary/90 mb-8 sm:mb-12 max-w-3xl mx-auto animate-fade-up leading-relaxed" style={{ animationDelay: "200ms" }}>
             Our mission is to increase the length and quality of lives in West Garfield Park by providing hope, prioritizing safety, and preventing displacement while adding valuable resources to our community.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center animate-fade-up" style={{ animationDelay: "400ms" }}>
             <a 
               href="#join-us" 
-              className="group bg-[#1A1F2C] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-md hover:bg-[#403E43] transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-lg text-base sm:text-lg font-medium focus:ring-2 focus:ring-offset-2 focus:ring-[#1A1F2C] focus:outline-none"
+              className="group bg-secondary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-secondary/90 transition-all duration-300 inline-flex items-center justify-center transform hover:-translate-y-0.5 hover:shadow-lg text-base sm:text-lg font-medium"
               aria-label="Get involved with Legacy Families"
             >
               Get Involved
@@ -44,7 +42,7 @@ export const Hero = () => {
             <Link 
               to="/about"
               onClick={() => window.scrollTo(0, 0)}
-              className="group border-2 border-[#1A1F2C] text-[#1A1F2C] px-6 sm:px-8 py-3 sm:py-4 rounded-md hover:bg-[#1A1F2C]/10 transition-all duration-300 transform hover:scale-105 text-base sm:text-lg font-medium focus:ring-2 focus:ring-offset-2 focus:ring-[#1A1F2C] focus:outline-none"
+              className="group border-2 border-secondary text-secondary px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-secondary/5 transition-all duration-300 transform hover:-translate-y-0.5 text-base sm:text-lg font-medium"
               aria-label="Learn more about Legacy Families"
             >
               Learn More

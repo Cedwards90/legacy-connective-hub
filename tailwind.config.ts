@@ -25,20 +25,20 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#F1F1F1",
-          foreground: "#1A1F2C", // Updated to darker color
+          DEFAULT: "#F1F0FB", // Soft cream background
+          foreground: "#1A1F2C", // Deep navy text
         },
         secondary: {
-          DEFAULT: "#403E43",
+          DEFAULT: "#403E43", // Rich dark gray
           foreground: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#94A187",
-          foreground: "#1A1F2C", // Updated to darker color
+          DEFAULT: "#94A187", // Muted sage
+          foreground: "#1A1F2C",
         },
         muted: {
           DEFAULT: "#F3F4F6",
-          foreground: "#403E43", // Updated to darker color
+          foreground: "#403E43",
         },
         cream: "#F1F0FB",
       },
@@ -46,20 +46,13 @@ export default {
         playfair: ["Playfair Display", "serif"],
         inter: ["Inter", "sans-serif"],
       },
-      keyframes: {
-        "fade-up": {
-          "0%": {
-            opacity: "0",
-            transform: "translateY(10px)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateY(0)",
-          },
-        },
+      boxShadow: {
+        'subtle': '0 2px 10px rgba(0, 0, 0, 0.05)',
+        'card': '0 4px 20px rgba(0, 0, 0, 0.08)',
       },
-      animation: {
-        "fade-up": "fade-up 0.5s ease-out",
+      spacing: {
+        '18': '4.5rem',
+        '22': '5.5rem',
       },
     },
   },
