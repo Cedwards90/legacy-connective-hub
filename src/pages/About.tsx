@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { TheoryOfChange } from "@/components/TheoryOfChange";
+import { VideoSection } from "@/components/VideoSection";
 
 const About = () => {
   return (
@@ -28,6 +29,8 @@ const About = () => {
         </div>
 
         <TheoryOfChange />
+
+        <VideoSection />
         
         {/* Turkey Giveaway Images Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-white">
